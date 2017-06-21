@@ -8,24 +8,32 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora.xml",
-        "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora.xml"
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_2.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_2.png"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
-        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_bg.xml"
+        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora.xml",
+        "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora.xml"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_1.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\pietro_1.png"
     },
     {
-        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_4.png",
-        "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\down_4.png"
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_100.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\door_100.png"
+    },
+    {
+        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_4.png",
+        "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\down_4.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
@@ -34,6 +42,10 @@
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_5.png",
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_5.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_info_black_24dp.xml",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\ic_info_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_16.png",
@@ -48,16 +60,16 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_14.png",
+        "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\pietro_14.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_settings_bluetooth_white_24dp.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\ic_settings_bluetooth_white_24dp.png"
     },
     {
-        "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_14.png",
-        "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\pietro_14.png"
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_00.png",
@@ -78,6 +90,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_settings_bluetooth_white_24dp.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\ic_settings_bluetooth_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_14.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_14.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
@@ -104,8 +120,16 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\down_4.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_1.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_1.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluetooth_alt.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\bluetooth_alt.png"
     },
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
@@ -142,6 +166,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_8.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora_8.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_60.png",
@@ -196,12 +224,12 @@
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
-    },
-    {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_15.png",
@@ -210,6 +238,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_settings_bluetooth_white_24dp.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\ic_settings_bluetooth_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
@@ -232,32 +264,40 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_0.png",
-        "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_0.png"
-    },
-    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_0.png",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_0.png"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_3.png",
-        "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_3.png"
-    },
-    {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_40.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\door_40.png"
     },
     {
-        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_3.png",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_3.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_3.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_3.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_2.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_2.png"
     },
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_13.png",
@@ -266,6 +306,18 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_100.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\door_100.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_10.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_10.png"
     },
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_10.png",
@@ -280,8 +332,20 @@
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro.xml",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro.xml"
+    },
+    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_8.png",
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\down_8.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
@@ -304,6 +368,14 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_20.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\door_20.png"
     },
@@ -314,6 +386,14 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_40.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\door_40.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_open.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_open.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
@@ -336,6 +416,10 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_7.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_7.png"
+    },
+    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_tab_indicator_material.xml"
     },
@@ -348,12 +432,16 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_8.png",
-        "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\down_8.png"
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_9.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_9.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_4.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_4.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_8.png",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\down_8.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_notifications_black_24dp.xml",
@@ -376,12 +464,24 @@
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\speed_slow.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\speed_slow.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_9.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_9.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_12.png",
@@ -400,12 +500,12 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
-        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_bg.xml"
-    },
-    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_9.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\down_9.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_5.png",
@@ -464,12 +564,12 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora_10.png"
     },
     {
-        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluetooth_alt.png",
-        "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\bluetooth_alt.png"
-    },
-    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluetooth_alt.png",
+        "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\bluetooth_alt.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
@@ -484,12 +584,12 @@
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_8.png",
-        "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora_8.png"
-    },
-    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_8.png",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora_8.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_5.png",
@@ -532,6 +632,10 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\ic_sync_black_24dp.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_password_eye.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_3.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\down_3.png"
     },
@@ -542,6 +646,10 @@
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_tile_bg.xml"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
@@ -584,8 +692,16 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\down_1.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_15.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_15.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
@@ -604,8 +720,16 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bluetooth_alt.png",
@@ -622,6 +746,14 @@
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_10.png",
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_10.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_80.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_80.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_100.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_100.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_notifications_black_24dp.xml",
@@ -642,6 +774,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\visu_frame.xml",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\visu_frame.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_2.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_2.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
@@ -692,8 +828,16 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\elevator_back.jpg"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_sync_black_24dp.xml",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\ic_sync_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_5.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\down_5.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_10.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_10.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
@@ -724,6 +868,10 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\door_40.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_info_black_24dp.xml",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\ic_info_black_24dp.xml"
     },
@@ -732,8 +880,24 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\pietro_16.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_6.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_6.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_1.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_1.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
@@ -742,6 +906,18 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_9.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_9.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_5.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_5.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -828,8 +1004,16 @@
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_close.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\door_close.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_close.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_close.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -838,6 +1022,10 @@
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_settings_bluetooth_white_24dp.png",
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\ic_settings_bluetooth_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_3.png",
@@ -854,6 +1042,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_6.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_6.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
@@ -936,6 +1128,14 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\speed_slow.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\speed_slow.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_0.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_0.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_7.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\pietro_7.png"
     },
@@ -964,8 +1164,20 @@
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_1.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_4.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_4.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_open.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\door_open.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_7.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_7.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_12.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_12.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_settings_bluetooth_white_24dp.png",
@@ -1040,6 +1252,10 @@
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\down_2.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_1.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_1.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_2.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\down_2.png"
     },
@@ -1052,6 +1268,10 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_0.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\down_0.png"
     },
@@ -1062,6 +1282,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_60.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\door_60.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_16.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_16.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\speed_slow.png",
@@ -1084,6 +1308,10 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_3.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
@@ -1100,6 +1328,14 @@
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\bluetooth_alt.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\visu_frame.xml",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\visu_frame.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_4.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_4.png"
+    },
+    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
@@ -1110,6 +1346,10 @@
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_0.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_0.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
@@ -1136,6 +1376,10 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
@@ -1144,12 +1388,24 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\elevator_back.jpg",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\elevator_back.jpg"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_6.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora_6.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\elevator_back.jpg",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\elevator_back.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\elevator_back.jpg",
@@ -1260,6 +1516,18 @@
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\pietro.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_4.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_4.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_9.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_9.png"
     },
@@ -1282,6 +1550,10 @@
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_8.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_8.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_1.png",
@@ -1314,6 +1586,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_10.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\pietro_10.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_40.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_40.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_2.png",
@@ -1358,6 +1634,10 @@
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_6.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\down_6.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_8.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_8.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
@@ -1412,6 +1692,10 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_9.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora_9.png"
     },
@@ -1460,6 +1744,14 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_10.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
@@ -1474,6 +1766,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_2.png",
@@ -1506,6 +1802,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_7.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\kierunek_gora_7.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_60.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_60.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
@@ -1548,6 +1848,10 @@
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\pietro_13.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_3.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_3.png"
+    },
+    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_3.png",
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\down_3.png"
     },
@@ -1574,6 +1878,18 @@
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_3.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_3.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_1.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_1.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_20.png",
@@ -1608,6 +1924,10 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\pietro_6.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_4.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_4.png"
     },
@@ -1618,6 +1938,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_2.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\pietro_2.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_2.png",
@@ -1660,8 +1984,16 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_11.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_13.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_13.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_info_black_24dp.xml",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\ic_info_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_20.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_20.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
@@ -1686,6 +2018,10 @@
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_notifications_black_24dp.xml",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_80.png",
@@ -1720,12 +2056,20 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\pietro_1.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_9.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\pietro_9.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_20.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\door_20.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_arrow_0.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_arrow_0.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_6.png",
@@ -1742,6 +2086,10 @@
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_15.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\drawable\\pietro_15.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_7.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_7.png"
     },
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_9.png",
@@ -1788,8 +2136,16 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\speed_slow.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_8.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_8.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_6.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\down_6.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
@@ -1820,6 +2176,10 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\ic_info_black_24dp.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora.xml",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\visu_frame.xml",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\visu_frame.xml"
     },
@@ -1836,6 +2196,14 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_11.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_11.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
@@ -1850,6 +2218,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro.xml",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\pietro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kierunek_gora_5.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_5.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
@@ -1908,6 +2280,10 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\kierunek_gora_9.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_notifications_black_24dp.xml",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_40.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\door_40.png"
     },
@@ -1916,12 +2292,24 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\430a12a74b7b23be8731b80677df92fa93c9abc8\\output\\res\\drawable\\design_snackbar_background.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\down_5.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\down_5.png"
+    },
+    {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_6.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\pietro_6.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
@@ -1934,6 +2322,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_8.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\pietro_8.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\frame.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\frame.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
@@ -1988,6 +2380,10 @@
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\down_5.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_13.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable\\pietro_13.png"
     },
@@ -2012,11 +2408,19 @@
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\door_00.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable\\door_00.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pietro_10.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable\\pietro_10.png"
     },
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_notifications_black_24dp.xml",
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\drawable\\abc_btn_radio_material.xml"
     }
 ]

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\layout-v16\\notification_template_custom_big.xml"
     },

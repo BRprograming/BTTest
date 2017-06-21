@@ -18,5 +18,9 @@
     {
         "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
         "source": "D:\\BTTest\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
 ]

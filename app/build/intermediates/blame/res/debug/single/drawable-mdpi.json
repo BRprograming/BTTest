@@ -20,6 +20,10 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_save_white_48dp.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_settings_bluetooth_white_48dp.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_settings_bluetooth_white_48dp.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_radio_button_unchecked_black_24dp.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_radio_button_unchecked_black_24dp.png"
     },
@@ -36,8 +40,20 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_info_outline_white_48dp.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_save_white_48dp.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_save_white_48dp.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_settings_white_48dp.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable-mdpi\\ic_settings_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_radio_button_checked_black_24dp.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_radio_button_checked_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_settings_white_48dp.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_settings_white_48dp.png"
     },
     {
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_settings_white_48dp.png",
@@ -52,12 +68,20 @@
         "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_settings_bluetooth_white_48dp.png"
     },
     {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_info_outline_white_48dp.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_info_outline_white_48dp.png"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_save_white_48dp.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\drawable-mdpi\\ic_save_white_48dp.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_settings_bluetooth_white_48dp.png",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_settings_bluetooth_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_radio_button_unchecked_black_24dp.png",
+        "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\drawable-mdpi\\ic_radio_button_unchecked_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_save_white_48dp.png",

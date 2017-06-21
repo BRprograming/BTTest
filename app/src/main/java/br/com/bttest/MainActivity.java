@@ -111,14 +111,12 @@ public class MainActivity extends AppCompatActivity
         View header = navigationView.getHeaderView(0);
         statusText = (TextView) header.findViewById(R.id.textViewStatus);
 
-        setConnectionStatus("vuhj");
-
         //od radka
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
         //txt1 = (TextView) findViewById(R.id.bt_message) ;
 
         //statusText = (TextView) findViewById(R.id.loginStatusText);
-        //statusText.setText(R.string.not_connected);
+        setConnectionStatus(getString(R.string.not_connected));
 
 
 
@@ -177,7 +175,7 @@ public class MainActivity extends AppCompatActivity
 
                     Toast.makeText(MainActivity.this, R.string.discconnect, Toast.LENGTH_LONG).show();
                     liftBT.setDisconnect();
-                    statusText.setText(R.string.discconnect);
+                    setConnectionStatus(getString(R.string.discconnect));
 
                     btIsConnected=false;
                     appStatus &=  ~Constants.STATE_CONNECT;
@@ -196,7 +194,7 @@ public class MainActivity extends AppCompatActivity
                     liftBT.startReceiveBT();
 
                     liftBT.callLoginDialog();
-                    //statusText.setText(R.string.connected);
+                    setConnectionStatus(getString(R.string.connected));
                     btIsConnected = true;
 
                 }
@@ -213,7 +211,7 @@ public class MainActivity extends AppCompatActivity
                             Toast.makeText(MainActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
                             liftBT.hideProgressDialogLogin();
                             // liftBT.hideLoginDialog();
-                           // statusText.setText(R.string.logged);
+                            setConnectionStatus(getString(R.string.logged));
                             appStatus &= ~Constants.STATE_LOGIN_ERROR;
                             appStatus |= Constants.STATE_LOGIN;
                             break;
@@ -221,7 +219,7 @@ public class MainActivity extends AppCompatActivity
                         case 1:
                             Toast.makeText(MainActivity.this, R.string.login_error_name, Toast.LENGTH_LONG).show();
                             liftBT.hideProgressDialogLogin();
-                          //  statusText.setText(R.string.not_logged);
+                            setConnectionStatus(getString(R.string.not_logged));
                             appStatus |= Constants.STATE_LOGIN_ERROR;
                             liftBT.callLoginDialog();
                             break;
@@ -229,7 +227,7 @@ public class MainActivity extends AppCompatActivity
                         case 2:
                             Toast.makeText(MainActivity.this, R.string.login_error_pass, Toast.LENGTH_LONG).show();
                             liftBT.hideProgressDialogLogin();
-                          //  statusText.setText(R.string.not_logged);
+                            setConnectionStatus(getString(R.string.not_logged));
                             appStatus |= Constants.STATE_LOGIN_ERROR;
                             liftBT.callLoginDialog();
                             break;
@@ -237,7 +235,7 @@ public class MainActivity extends AppCompatActivity
                         case 3:
                             Toast.makeText(MainActivity.this, R.string.login_error, Toast.LENGTH_LONG).show();
                             liftBT.hideProgressDialogLogin();
-                          //  statusText.setText(R.string.not_logged);
+                            setConnectionStatus(getString(R.string.not_logged));
                             appStatus |= Constants.STATE_LOGIN_ERROR;
                             liftBT.callLoginDialog();
                             break;
@@ -246,7 +244,7 @@ public class MainActivity extends AppCompatActivity
                             Toast.makeText(MainActivity.this, R.string.login_error, Toast.LENGTH_LONG).show();
                             liftBT.hideProgressDialogLogin();
                             appStatus |= Constants.STATE_LOGIN_ERROR;
-                          //  statusText.setText("HUJ WIE CO TO ZA ERROR");
+                            setConnectionStatus("HUJ WIE CO TO ZA ERROR");
                             liftBT.callLoginDialog();
                             break;
                     }
@@ -255,7 +253,7 @@ public class MainActivity extends AppCompatActivity
                 if(msg.what == Constants.PERMISSIONS_ERROR_MSG) {
 
                     Toast.makeText(MainActivity.this, R.string.not_permissions, Toast.LENGTH_LONG).show();
-                   // statusText.setText(R.string.not_logged);
+                    setConnectionStatus(getString(R.string.not_logged));
                 }
 
                 if(msg.what == Constants.LOGIN_TIMEOUT_MSG) {
@@ -309,7 +307,7 @@ public class MainActivity extends AppCompatActivity
 
                 Toast.makeText(MainActivity.this, R.string.discconnect, Toast.LENGTH_LONG).show();
                 liftBT.setDisconnect();
-               // statusText.setText(R.string.discconnect);
+                setConnectionStatus(getString(R.string.discconnect));
                 appStatus &= ~Constants.STATE_CONNECT;
                 appStatus |= Constants.STATE_DISCONNECT;
 
