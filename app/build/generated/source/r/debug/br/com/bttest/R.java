@@ -3279,7 +3279,6 @@ containing a value of this type.
         public static final int icon_group=0x7f0f00eb;
         public static final int ifRoom=0x7f0f0043;
         public static final int image=0x7f0f004d;
-        public static final int imageView=0x7f0f00d7;
         public static final int imageView10=0x7f0f00bc;
         public static final int imageView11=0x7f0f00ba;
         public static final int imageView12=0x7f0f00be;
@@ -3297,6 +3296,7 @@ containing a value of this type.
         public static final int imageViewDoorFrame=0x7f0f00a1;
         public static final int imageViewErrorFrame=0x7f0f00a7;
         public static final int imageViewFloorFrame=0x7f0f0098;
+        public static final int imageViewIcon=0x7f0f00d7;
         public static final int imageViewSpeed=0x7f0f009f;
         public static final int imageViewSpeedFrame=0x7f0f009e;
         public static final int imageViewWayDown=0x7f0f00a5;

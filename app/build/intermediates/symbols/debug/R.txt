@@ -896,7 +896,6 @@ int id icon 0x7f0f0050
 int id icon_group 0x7f0f00eb
 int id ifRoom 0x7f0f0043
 int id image 0x7f0f004d
-int id imageView 0x7f0f00d7
 int id imageView10 0x7f0f00bc
 int id imageView11 0x7f0f00ba
 int id imageView12 0x7f0f00be
@@ -914,6 +913,7 @@ int id imageViewDoor 0x7f0f00a2
 int id imageViewDoorFrame 0x7f0f00a1
 int id imageViewErrorFrame 0x7f0f00a7
 int id imageViewFloorFrame 0x7f0f0098
+int id imageViewIcon 0x7f0f00d7
 int id imageViewSpeed 0x7f0f009f
 int id imageViewSpeedFrame 0x7f0f009e
 int id imageViewWayDown 0x7f0f00a5

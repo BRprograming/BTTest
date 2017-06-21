@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
     static Handler handler;
     static Set<BluetoothDevice> pairedDevices;
     String adress;
+    ImageView ikona;
 
     EditText valueSet;
     EditText adressSet;
@@ -63,9 +64,6 @@ public class MainActivity extends AppCompatActivity
 
 
 
-
-        //typ_napędu = (TextView)findViewById(R.id.textView_typ_napedu);
-        //drzwi = (ImageView)findViewById(R.id.imageView2);
         floortxt = (TextView) findViewById(R.id.textViewFloor);
         statusText = (TextView) findViewById(R.id.textViewStatus);
         final ImageView image_floor = (ImageView) findViewById(R.id.imageViewFloorFrame);

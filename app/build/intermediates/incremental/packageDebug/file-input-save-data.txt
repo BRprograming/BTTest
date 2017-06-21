@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jun 21 12:42:08 CEST 2017
+#Wed Jun 21 13:18:09 CEST 2017
 210.set=ANDROID_RESOURCE
 282.file=C\:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\design_layout_tab_icon.xml
 14.set=ANDROID_RESOURCE
