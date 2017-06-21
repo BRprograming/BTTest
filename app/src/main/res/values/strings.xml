@@ -18,7 +18,6 @@
     <string name="zapisz_parametry">Zapisz parametry</string>
 
 
-
     <!--  BluetoothChat -->
     <string name="send">Send</string>
     <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>

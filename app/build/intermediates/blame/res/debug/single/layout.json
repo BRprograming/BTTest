@@ -132,6 +132,7 @@
         "source": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\src\\main\\res\\layout\\activity_device_list.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\Radek\\Documents\\GitHub\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
@@ -140,6 +141,8 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
+=======
+>>>>>>> error activity
         "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
         "source": "C:\\Users\\nowy1\\.android\\build-cache\\a189487b73f77f06e51bcc00e22415bdfa027d94\\output\\res\\layout\\notification_template_icon_group.xml"
     },
@@ -164,10 +167,13 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_dialog.xml",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\layout\\login_dialog.xml"
     },
     {
+=======
+>>>>>>> error activity
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_parameters.xml",
         "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\layout\\activity_parameters.xml"
     },
@@ -602,6 +608,10 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\289bac6c543f72bbd2e2db24169f09921beb413c\\output\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_error.xml",
+        "source": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\src\\main\\res\\layout\\activity_error.xml"
     },
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",

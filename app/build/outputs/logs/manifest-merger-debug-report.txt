@@ -1,6 +1,10 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml:2:1-51:12
+=======
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:2:1-50:12
+>>>>>>> error activity
 	package
 		ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml:3:5-28
 		INJECTED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml
@@ -18,6 +22,7 @@ ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml:5:22-63
 uses-permission#android.permission.BLUETOOTH
+<<<<<<< HEAD
 ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml:7:5-68
 	android:name
 		ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml:7:22-65
@@ -103,6 +108,97 @@ ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.x
 		ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml:48:13-69
 	android:name
 		ADDED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml:47:13-41
+=======
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:6:5-68
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:6:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:8:5-74
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:8:22-71
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:9:22-76
+application
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:11:5-48:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\nowy1\.android\build-cache\430a12a74b7b23be8731b80677df92fa93c9abc8\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\nowy1\.android\build-cache\a189487b73f77f06e51bcc00e22415bdfa027d94\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\nowy1\.android\build-cache\f6ab55d94b918c177aa72f0ce006740018f34798\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\nowy1\.android\build-cache\7c55b08a92bfd84c853507c5055ea23c8467820a\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\nowy1\.android\build-cache\78f917cd894592938e323eb956e4538dec020f5e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\nowy1\.android\build-cache\882d2bd39ee73993448d14ee792b7b4d8fda74ef\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\nowy1\.android\build-cache\6f1087c4f8f7f0bdfd21100c40108be89c17ce6e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\nowy1\.android\build-cache\3d297dcbe624c6f31640c405190443c59923099b\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\nowy1\.android\build-cache\0ee9bc49c0cbf0a643b8508e10ff89f43263f031\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\nowy1\.android\build-cache\22ae590eaeeb3af325b769cbc868dba94c4bcb55\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\nowy1\.android\build-cache\5d7f205c3b748aee694aa4c687e626fae02c570a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nowy1\.android\build-cache\585cd7931e4b4fb7990772a48c9169957a9549ef\output\AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:14:9-41
+	android:supportsRtl
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:15:9-35
+	android:allowBackup
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:13:9-47
+	android:theme
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:16:9-40
+activity#br.com.bttest.MainActivity
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:17:9-26:20
+	android:label
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:19:13-45
+	android:theme
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:20:13-56
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:18:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:21:13-25:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:24:17-77
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:24:27-74
+activity#br.com.bttest.SettingsActivity
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:27:9-34:20
+	android:label
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:29:13-60
+	android:parentActivityName
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:30:13-55
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:28:13-45
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:31:13-33:62
+	android:value
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:33:17-59
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:32:17-63
+activity#br.com.bttest.ParametersActivity
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:35:9-42:20
+	android:label
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:37:13-46
+	android:parentActivityName
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:38:13-55
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:36:13-47
+activity#br.com.bttest.DeviceListActivity
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:43:9-56
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:43:19-53
+activity#br.com.bttest.MenageDevice
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:44:9-46:72
+	android:theme
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:46:13-69
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:45:13-41
+activity#br.com.bttest.ErrorActivity
+ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:47:9-60
+	android:name
+		ADDED from C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\AndroidManifest.xml:47:19-48
+>>>>>>> error activity
 uses-sdk
 INJECTED from C:\Users\Radek\Documents\GitHub\BTTest\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.3.1] C:\Users\Radek\.android\build-cache\ef67f60c8485d5881f97138c73a23ed6caf35316\output\AndroidManifest.xml:21:5-23:62

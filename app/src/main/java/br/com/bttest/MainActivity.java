@@ -87,6 +87,15 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        ImageView errorImage = (ImageView) findViewById(R.id.imageViewErrorFrame);
+        errorImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent error = new Intent(MainActivity.this, ErrorActivity.class);
+                startActivity(error);
+            }
+        });
+
 
         /*AnimationDrawable animacja_kierunek_gora = (AnimationDrawable) image_kierunek_gora.getBackground();
         AnimationDrawable animacja_pietro = (AnimationDrawable) image_pietro.getBackground();

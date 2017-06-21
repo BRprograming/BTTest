@@ -54,6 +54,7 @@
         <activity
             android:name="br.com.bttest.MenageDevice"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="br.com.bttest.ErrorActivity" />
     </application>
 
 </manifest>

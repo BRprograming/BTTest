@@ -3,12 +3,10 @@
     package="br.com.bttest">
 
     <uses-permission android:name="android.permission.VIBRATE" />
-
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 
     <application
         android:allowBackup="true"
@@ -46,6 +44,7 @@
         <activity
             android:name=".MenageDevice"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".ErrorActivity"></activity>
     </application>
 
 </manifest>
