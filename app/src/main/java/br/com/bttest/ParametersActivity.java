@@ -56,7 +56,6 @@ public class ParametersActivity extends AppCompatActivity {
         };
 
     }
-    //TODO obsługa przycisku fizycznego cofnij
 
     public void SendVal (View view){
 

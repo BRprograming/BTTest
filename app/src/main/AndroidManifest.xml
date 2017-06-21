@@ -44,7 +44,9 @@
         <activity
             android:name=".MenageDevice"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ErrorActivity"></activity>
+        <activity android:name=".ErrorActivity"
+            android:label="Rejest usterek"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

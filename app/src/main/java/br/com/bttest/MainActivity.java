@@ -391,6 +391,9 @@ public class MainActivity extends AppCompatActivity
 
 
             } else if (id == R.id.Rejestr_usterek) {
+                Intent intent_error = new Intent(this, ErrorActivity.class);
+                intent_error.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);//wraca do aktywnosci a nie uruchamia jej na nowo
+                startActivity(intent_error);
 
             }
 
