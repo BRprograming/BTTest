@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity
 
         //statusText = (TextView) findViewById(R.id.loginStatusText);
         setConnectionStatus(getString(R.string.not_connected));
+        //huj12312313
 
 
 
