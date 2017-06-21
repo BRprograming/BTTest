@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Ilość_przystanków_01">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="Typ_napędu_04">
+        <item>elektryczny dwubiegowy</item>
+        <item>elektryczny regulowany</item>
+        <item>hydrauliczny</item>
+        <item>elektryczny regulowany</item>
+    </string-array>
+
+    <string-array name="Funkcje_nadzrou_drzwi_20">
+        <item>Załączona obsługa krzywki ryglowania elektrycznego.</item>
+        <item>Załączona obsługa podchwytów.</item>
+        <item>Podczas pracy normalnej przekaźnik KR jest zwalniany po całkowitym otwarciu
+automatycznych drzwi kabinowych.</item>
+        <item>Sygnalizacja dźwiękowa blokady zamykania drzwi.</item>
+        <item>Przy wyłączaniu oświetlenia kabiny, wyłączane są takŜe piętrowskazywacze.</item>
+        <item>Funkcja kontroli otwarcia drzwi szybowych poza strefą przystanku.</item>
+        <item>Sterowanie zewnętrzne (tylko do 6 przystanków).</item>
+        <item>Ponowne otwarcie drzwi automatycznych po nieudanej próbie ryglowania.</item>
+    </string-array>
+
+
+    //menu ustawienia
+    <string-array name="specialFuncion_entries">
+        <item>funkcje diagnostyczne wyłączone - praca normalna</item>
+        <item>ignorowanie przeciążenia i pełnego obciążęnia</item>
+        <item>ignorowanie sygnałów  odwzorowania poza BEU i BEO</item>
+        <item>zablokowanie zmian wszystkich sygnałów odwzorowania</item>
+        <item>generowanie 100 dyspozycji jazdy po przystankach</item>
+        <item>wstawianie znacznika (kodu 0) na stos usterek</item>
+        <item>załączenie wentylatora kabinowego</item>
+        <item>otwarcie dzwi kabinowych  strony głównej</item>
+        <item>otwarcie dzwi kabinowych  strony przelotowej</item>
+        <item>załączenie przekaźnika KLK, test A3 z prędkością nominalną</item>
+        <item>załączenie przekaźnika KLK, test A3 z prędkością dojazdową</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>polski</item>
+        <item>angielski</item>
+        <item>rosyjski</item>
+        <item>włoski</item>
+    </string-array>
+
+</resources>

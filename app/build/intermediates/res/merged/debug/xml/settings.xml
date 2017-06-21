@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/language_entries"
+        android:entryValues="@array/Ilość_przystanków_01"
+        android:key="language_set"
+        android:summary="%s"
+        android:title="Język interfejsu użytkownika" />
+    <EditTextPreference
+        android:defaultValue="0000"
+        android:key="time_set"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Ustawienia zegara" />
+    <EditTextPreference
+        android:defaultValue="0"
+        android:key="LCD_off"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Czas włączenia wyświetlacza LCD" />
+    <EditTextPreference
+        android:defaultValue="0"
+        android:key="EEPROM_delay"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Zwłoka zapisu usterki do EEPROM" />
+    <MultiSelectListPreference
+        android:defaultValue="@array/Ilość_przystanków_01"
+        android:entries="@array/specialFuncion_entries"
+        android:entryValues="@array/Ilość_przystanków_01"
+        android:key="specialFuncion_set"
+        android:summary="Funkcje testowe wykorzystywane przy badaniach dźwigu"
+        android:title="Funkcje specjalne" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="call_off"
+        android:title="Wyłączenie wezwań" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="in_control"
+        android:summaryOff="off"
+        android:summaryOn="ON"
+        android:switchTextOff="wyłączma"
+        android:switchTextOn="włączam"
+        android:title="Funkcja kontroli wejść" />
+    <EditTextPreference
+        android:defaultValue="0"
+        android:key="jazda_techniczna"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Jazda techniczna" />
+
+</PreferenceScreen>

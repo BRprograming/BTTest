@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <EditText
+        android:id="@+id/loginEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLogin"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/passwordEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titlePassword"
+        android:layout_alignStart="@+id/titlePassword"
+        android:layout_below="@+id/titlePassword"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/okBt"
+
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/passwordEdit"
+        android:layout_alignRight="@+id/passwordEdit"
+        android:layout_below="@+id/passwordEdit"
+        android:layout_marginTop="24dp"
+        android:text="OK" />
+
+    <TextView
+        android:id="@+id/titleLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginEdit"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/loginEdit"
+        android:text="Nazwa:" />
+
+    <TextView
+        android:id="@+id/titlePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasło:"
+        android:layout_below="@+id/loginEdit"
+        android:layout_alignLeft="@+id/loginEdit"
+        android:layout_alignStart="@+id/loginEdit" />
+
+</RelativeLayout>

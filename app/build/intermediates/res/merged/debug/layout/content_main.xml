@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:columnCount="3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.bttest.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="@dimen/visuSize"
+        android:layout_height="@dimen/visuSize"
+        android:layout_marginTop="@dimen/visuMargin"
+        android:layout_marginRight="@dimen/visuMargin">
+
+        <ImageView
+            android:id="@+id/imageViewFloorFrame"
+            android:layout_width="@dimen/visuSize"
+            android:layout_height="@dimen/visuSize"
+            app:srcCompat="@drawable/visu_frame" />
+
+        <TextView
+            android:id="@+id/textViewFloorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewFloorFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuTitleMargin"
+            android:text="PIĘTRO"
+            android:textAppearance="@style/VisuTitle" />
+
+        <TextView
+            android:id="@+id/textViewFloor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewFloorFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:text="-"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/visuImageSize"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_width="@dimen/visuSize"
+    android:layout_height="@dimen/visuSize"
+    android:layout_marginTop="@dimen/visuMargin"
+    android:layout_marginRight="@dimen/visuMargin">
+
+    <ImageView
+        android:id="@+id/imageViewWayUpFrame"
+        android:layout_width="@dimen/visuSize"
+        android:layout_height="@dimen/visuSize"
+        app:srcCompat="@drawable/visu_frame" />
+
+    <ImageView
+        android:id="@+id/imageViewWayUp"
+        android:layout_width="@dimen/visuImageSize"
+        android:layout_height="@dimen/visuImageSize"
+        android:layout_alignBottom="@+id/imageViewWayUpFrame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/visuImageMargin"
+        app:srcCompat="@drawable/down_arrow_0" />
+
+    <TextView
+        android:id="@+id/textViewWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewWayUpFrame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/visuTitleMargin"
+        android:text="KIERUNEK"
+        android:textAppearance="@style/VisuTitle" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/visuSize"
+        android:layout_height="@dimen/visuSize"
+        android:layout_marginTop="@dimen/visuMargin"
+        android:layout_marginRight="@dimen/visuMargin">
+
+        <ImageView
+            android:id="@+id/imageViewSpeedFrame"
+            android:layout_width="@dimen/visuSize"
+            android:layout_height="@dimen/visuSize"
+            app:srcCompat="@drawable/visu_frame" />
+
+        <ImageView
+            android:id="@+id/imageViewSpeed"
+            android:layout_width="@dimen/visuImageSize"
+            android:layout_height="@dimen/visuImageSize"
+            android:layout_alignBottom="@+id/imageViewSpeedFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuImageMargin"
+            app:srcCompat="@drawable/down_arrow_0" />
+
+        <TextView
+            android:id="@+id/textViewSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewSpeedFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuTitleMargin"
+            android:text="PRĘDKOŚĆ"
+            android:textAppearance="@style/VisuTitle" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/visuSize"
+        android:layout_height="@dimen/visuSize"
+        android:layout_marginTop="@dimen/visuMargin"
+        android:layout_marginRight="@dimen/visuMargin">
+
+        <ImageView
+            android:id="@+id/imageViewDoorFrame"
+            android:layout_width="@dimen/visuSize"
+            android:layout_height="@dimen/visuSize"
+            app:srcCompat="@drawable/visu_frame" />
+
+        <ImageView
+            android:id="@+id/imageViewDoor"
+            android:layout_width="@dimen/visuImageSize"
+            android:layout_height="@dimen/visuImageSize"
+            android:layout_alignBottom="@+id/imageViewDoorFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuImageMargin"
+            app:srcCompat="@drawable/down_arrow_0" />
+
+        <TextView
+            android:id="@+id/textViewDoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewDoorFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuTitleMargin"
+            android:text="DRZWI"
+            android:textAppearance="@style/VisuTitle" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/visuSize"
+        android:layout_height="@dimen/visuSize"
+        android:layout_marginTop="@dimen/visuMargin"
+        android:layout_marginRight="@dimen/visuMargin">
+
+        <ImageView
+            android:id="@+id/imageViewWayDownFrame"
+            android:layout_width="@dimen/visuSize"
+            android:layout_height="@dimen/visuSize"
+            app:srcCompat="@drawable/visu_frame" />
+
+        <ImageView
+            android:id="@+id/imageViewWayDown"
+            android:layout_width="@dimen/visuImageSize"
+            android:layout_height="@dimen/visuImageSize"
+            android:layout_alignBottom="@+id/imageViewWayDownFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuImageMargin"
+            app:srcCompat="@drawable/down_arrow_0" />
+
+        <TextView
+            android:id="@+id/textViewWayDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewWayDownFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuTitleMargin"
+            android:text="KIERUNEK"
+            android:textAppearance="@style/VisuTitle" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/visuSize"
+        android:layout_height="@dimen/visuSize"
+        android:layout_marginTop="@dimen/visuMargin"
+        android:layout_marginRight="@dimen/visuMargin">
+
+        <ImageView
+            android:id="@+id/imageViewErrorFrame"
+            android:layout_width="@dimen/visuSize"
+            android:layout_height="@dimen/visuSize"
+            app:srcCompat="@drawable/visu_frame" />
+
+        <TextView
+            android:id="@+id/textViewErrorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewErrorFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/visuTitleMargin"
+            android:text="ERROR"
+            android:textAppearance="@style/VisuTitle" />
+
+        <TextView
+            android:id="@+id/textViewError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewErrorFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:text="00"
+            android:textColor="#F22222"
+            android:textSize="@dimen/visuImageSize"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="328dp"
+        android:layout_height="78dp"
+        android:layout_columnSpan="3"
+        android:layout_marginRight="@dimen/visuMargin"
+        android:layout_marginTop="@dimen/visuMargin">
+
+        <ImageView
+            android:id="@+id/imageViewErrorFrame"
+            android:layout_width="328dp"
+            android:layout_height="78dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/visu_frame" />
+
+        <TextView
+            android:id="@+id/textViewErrorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="zamknięcie obwodu łączników:"
+            android:textAllCaps="true"
+            android:textAppearance="@style/VisuTitle" />
+
+        <TextView
+            android:id="@+id/textViewError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewErrorTitle"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="23dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:fontFamily="sans-serif"
+            android:text="krańcowych"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textViewError"
+            android:layout_below="@+id/textViewError"
+            android:fontFamily="sans-serif"
+            android:text="bezpieczeństwa na kabinie"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignStart="@+id/textView8"
+            android:fontFamily="sans-serif"
+            android:text="rygli"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView7"
+            android:layout_alignEnd="@+id/textViewErrorTitle"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="sans-serif"
+            android:text="drzwi"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView3"
+            android:layout_below="@+id/imageView3"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView5"
+            android:layout_below="@+id/imageView5"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignTop="@+id/textView8"
+            android:layout_marginEnd="7dp"
+            android:layout_toStartOf="@+id/textView7"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_above="@+id/textView3"
+            android:layout_toStartOf="@+id/textViewErrorTitle"
+            app:srcCompat="@drawable/ic_radio_button_checked_green_24dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="328dp"
+        android:layout_height="160dp"
+        android:layout_columnSpan="3"
+        android:layout_marginRight="@dimen/visuMargin"
+        android:layout_marginTop="@dimen/visuMargin">
+
+        <ImageView
+            android:id="@+id/imageViewErrorFrame"
+            android:layout_width="328dp"
+            android:layout_height="165dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/visu_frame" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignTop="@+id/textView10"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/textView10"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView14"
+            android:layout_marginStart="9dp"
+            android:layout_toEndOf="@+id/imageView14"
+            android:fontFamily="sans-serif"
+            android:text="dolny"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView7"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@+id/imageView6"
+            android:fontFamily="sans-serif"
+            android:text="górny łącznik końcowy"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView9"
+            android:layout_alignStart="@+id/textView13"
+            android:fontFamily="sans-serif"
+            android:text="przycisk otwierania drzwi"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView10"
+            android:layout_below="@+id/textView10"
+            android:fontFamily="sans-serif"
+            android:text="łączniki ruchu drzwi"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView11"
+            android:layout_alignStart="@+id/textView15"
+            android:fontFamily="sans-serif"
+            android:text="sygnał otwierania drzwi z obsługi grupy"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView10"
+            android:layout_alignStart="@+id/textView12"
+            android:fontFamily="sans-serif"
+            android:text="sygnał otwierania drzwi z p. wezwania"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView12"
+            android:layout_alignStart="@+id/textView14"
+            android:fontFamily="sans-serif"
+            android:text="fotokomórka"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView16"
+            android:layout_below="@+id/textView16"
+            android:fontFamily="sans-serif"
+            android:text="łącznik uderzeniowy drzwi"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView17"
+            android:layout_below="@+id/textView17"
+            android:fontFamily="sans-serif"
+            android:text="blokada niektórych przystanków"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView6"
+            android:layout_below="@+id/imageView6"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView7"
+            android:layout_below="@+id/imageView7"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView8"
+            android:layout_below="@+id/imageView8"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView9"
+            android:layout_below="@+id/imageView9"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView10"
+            android:layout_below="@+id/imageView10"
+            app:srcCompat="@drawable/ic_radio_button_checked_green_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView11"
+            android:layout_below="@+id/imageView11"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignStart="@+id/imageView12"
+            android:layout_below="@+id/imageView12"
+            app:srcCompat="@drawable/ic_radio_button_unchecked_black_24dp" />
+
+
+    </RelativeLayout>
+
+
+</GridLayout>

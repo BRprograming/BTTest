@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Parametry">
+        <menu>
+            <item
+                android:id="@+id/Dane_sterowania"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="Dane sterowania" />
+            <item
+                android:id="@+id/Licznik_czasu"
+                android:icon="@android:drawable/ic_lock_idle_alarm"
+                android:title="Licznik czasu" />
+        </menu>
+    </item>
+
+    <item android:title="Konserwacja">
+        <menu>
+            <item
+                android:id="@+id/Ustawienia"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="Ustawienia" />
+            <item
+                android:id="@+id/Rejestr_usterek"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Rejestr Usterek" />
+        </menu>
+    </item>
+
+    <item android:title="Diagnostyka">
+        <menu>
+        <item
+            android:id="@+id/cos"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Coś tam coś tam" />
+        </menu>
+    </item>
+
+
+
+
+</menu>

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">BTTest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="BT_settings">Ustawienia Bluetooth</string>
+
+
+    <string name="title_activity_settings">Settings</string>
+
+
+    <string name="ilosc_przystankow">Ilość przystanków</string>
+    <string name="Typ_napędu_04">Typ napędu</string>
+    <string name="Kontrola_termistora_silnika_15">Kontrola termistora silnika</string>
+    <string name="Funkcje_nadzoru_drzwi_20">Funkcje nadzoru drzwi</string>
+    <string name="zapisz_parametry">Zapisz parametry</string>
+
+
+
+    <!--  BluetoothChat -->
+    <string name="send">Send</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+
+    <string name="title_not_connected">not connected</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+
+    <string name="none_paired">No devices have been paired</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make discoverable</string>
+
+
+    <!-- MenageDevice Menu -->
+    <string name="select_device">Wbierz urządzenie.</string>
+    <string name="select_pairing_device">Wybierz do sparowania.</string>
+    <string name="connect">Łączenie...</string>
+    <string name="search">Szukanie...</string>
+    <string name="conect">Połącz</string>
+    <string name="pair_and_connect">Sparowano, trwa łączenie</string>
+    <string name="serch_device">Szukaj urządzeń</string>
+    <string name="find">znaleziono:</string>
+    <string name="no_paried_find"> Nie znaleziono sparowanych urządzeń.</string>
+    <string name="connected">Połączono</string>
+    <string name="discconnect">Rozłączono z urządzeniem</string>
+    <string name="failed_connect">Nie udało się połączyć</string>
+    <string name="already_connected">Jesteś połączony</string>
+    <string name="disconnecting">Rozłączanie...</string>
+
+    <string name="not_connected">Nie jesteś połączony</string>
+    <string name="not_connected_lift">Nie jesteś połączony z windą</string>
+    <string name="none_found">Nie znaleziono rzadnych urządzeń</string>
+
+    <!-- LiftBT -->
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="on_bt_to_connect">Włącz Bluetooth, aby połączyć.</string>
+    <string name="on_now">Uruchomić teraz ?</string>
+    <string name="bt_is_off">Bluetooth jest wyłączony.</string>
+    <string name="run_bt">Uruchamiam bluetooth</string>
+
+    <!-- DeviceList -->
+    <string name="device_not_pairing">Wybrane urządzenie nie jest spraowane.</string>
+    <string name="pairing">Paruje urządzenia</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="login_ok">Logowanie zakończone skucesem</string>
+    <string name="login_error_name">Niepoprawna nazwa</string>
+    <string name="login_error_pass">Niepoprawne hasło</string>
+    <string name="login_error">Niepoprawna nazwa i hasło</string>
+    <string name="logged">Zalogowany</string>
+    <string name="not_logged">Nie zalogowany</string>
+    <string name="not_permissions">Nie masz odpowiednich uprawnień</string>
+
+</resources>

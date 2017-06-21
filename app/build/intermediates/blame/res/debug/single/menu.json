@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\dane_sterowania.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\menu\\dane_sterowania.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\menu\\dane_sterowania.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\menu\\dane_sterowania.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\dane_sterowania.xml",
+        "source": "D:\\BTTest\\app\\src\\main\\res\\menu\\dane_sterowania.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\menu\\dane_sterowania.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\menu\\dane_sterowania.xml"
+    },
+    {
+        "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\BTTest\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\Radek\\Desktop\\studia\\wersje programu\\BTTest_21_06_2017\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "D:\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "D:\\BTTest\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    }
+]
