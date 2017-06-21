@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     },
     {
+        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\nowy1\\.android\\build-cache\\430a12a74b7b23be8731b80677df92fa93c9abc8\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\Lift\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     },
@@ -30,5 +34,9 @@
     {
         "merged": "C:\\Users\\Radek\\Desktop\\studia\\BTTest_21_06_2017\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
         "source": "C:\\Users\\Radek\\.android\\build-cache\\ef67f60c8485d5881f97138c73a23ed6caf35316\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "C:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\nowy1\\.android\\build-cache\\430a12a74b7b23be8731b80677df92fa93c9abc8\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     }
 ]
