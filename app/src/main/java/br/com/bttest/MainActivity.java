@@ -36,10 +36,7 @@ import java.util.Set;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView typ_napędu;
     TextView floortxt;
-    ImageView drzwi;
-    int floor_int;
 
 
     //od radka
@@ -70,6 +67,7 @@ public class MainActivity extends AppCompatActivity
         //typ_napędu = (TextView)findViewById(R.id.textView_typ_napedu);
         //drzwi = (ImageView)findViewById(R.id.imageView2);
         floortxt = (TextView) findViewById(R.id.textViewFloor);
+        statusText = (TextView) findViewById(R.id.textViewStatus);
         final ImageView image_floor = (ImageView) findViewById(R.id.imageViewFloorFrame);
         image_floor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -427,6 +425,12 @@ public class MainActivity extends AppCompatActivity
     void SetFloorVisu (Integer floor)
     {
         floortxt.setText(floor.toString());
+    }
+
+    void SetConnectionStatus (String status)
+    {
+        statusText.setText(status);
+
     }
 
 }

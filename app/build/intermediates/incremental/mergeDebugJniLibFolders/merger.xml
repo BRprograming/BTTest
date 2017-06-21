@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< Updated upstream
-<merger version="3"><dataSet config="main"><source path="D:\BTTest\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\BTTest\app\src\debug\jniLibs"/></dataSet></merger>
-=======
 <merger version="3"><dataSet config="main"><source path="C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\nowy1\Desktop\Aplikacja\BTTest\app\src\debug\jniLibs"/></dataSet></merger>
->>>>>>> Stashed changes
