@@ -39,6 +39,7 @@ public interface Constants {
 
     public static  final int SEND_VAL_MSG   =41;
     public static  final int REQUEST_READ_VAL_MSG   =42;
+    public static  final int REQUEST_SET_STATUS   =43;
 
 
     // struktura ramki
@@ -49,6 +50,7 @@ public interface Constants {
 
     public static final int WRITE_FUNC = 1 ;
     public static final int READ_FUNC = 2 ;
+    public static final int SET_STATUS = 3 ;
     public static final int LOGIN_PASSWORD_DATA_FUNC = 5 ;
     public static final int LOGOUT_FUNC = 6 ;
     public static final int PERMISSIONS_ERROR_FUNC =10;

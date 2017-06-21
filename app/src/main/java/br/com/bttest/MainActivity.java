@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
         /*AnimationDrawable animacja_kierunek_gora = (AnimationDrawable) image_kierunek_gora.getBackground();
         AnimationDrawable animacja_pietro = (AnimationDrawable) image_pietro.getBackground();
         animacja_kierunek_gora.start();
@@ -139,6 +140,20 @@ public class MainActivity extends AppCompatActivity
 
                     adressAndValue = (int[]) msg.obj;
                     liftBT.btSend(Constants.READ_FUNC, adressAndValue[0],adressAndValue[1]);
+                }
+
+                if(msg.what == Constants.REQUEST_SET_STATUS) {
+
+                    int[] adressAndValue = new  int[2];
+
+                    adressAndValue = (int[]) msg.obj;
+                    switch (adressAndValue[1]) {
+
+                        case 1:
+                                SetFloorVisu(adressAndValue[2]);
+                            break;
+
+                    }
                 }
 
                 if(msg.what == Constants.START_CONNECT_MSG) {
@@ -407,6 +422,11 @@ public class MainActivity extends AppCompatActivity
                 return;
             }
         }
+    }
+    // funkcja ustawiajaąca visualizacje piętra
+    void SetFloorVisu (Integer floor)
+    {
+        floortxt.setText(floor.toString());
     }
 
 }

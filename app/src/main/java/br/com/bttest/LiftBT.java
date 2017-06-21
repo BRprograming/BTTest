@@ -643,6 +643,20 @@ class ReceiveBT extends Thread{
                             h1.sendMessage(wiadomosc);
                         }
 
+                        if (frameData[Constants.FUNC_POS] == Constants.SET_STATUS)
+                        {
+                            // Tworzymy nową wiadomość
+                            Message wiadomosc = new Message();
+
+                            // Dodajemy treść, używamy jednego z dostępnych pól w Message
+
+                            wiadomosc.what = Constants.REQUEST_SET_STATUS;
+
+                            wiadomosc.obj = frameData;
+
+                            h1.sendMessage(wiadomosc);
+                        }
+
 
                     }
 
