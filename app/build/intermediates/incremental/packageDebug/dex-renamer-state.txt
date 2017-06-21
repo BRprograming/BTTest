@@ -1,4 +1,4 @@
-#Wed Jun 21 13:18:09 CEST 2017
+#Wed Jun 21 13:38:06 CEST 2017
 base.0=C\:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\nowy1\\Desktop\\Aplikacja\\BTTest\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

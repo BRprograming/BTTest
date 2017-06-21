@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity
     static Handler handler;
     static Set<BluetoothDevice> pairedDevices;
     String adress;
-    ImageView ikona;
 
     EditText valueSet;
     EditText adressSet;
@@ -64,8 +63,9 @@ public class MainActivity extends AppCompatActivity
 
 
 
+
+
         floortxt = (TextView) findViewById(R.id.textViewFloor);
-        statusText = (TextView) findViewById(R.id.textViewStatus);
         final ImageView image_floor = (ImageView) findViewById(R.id.imageViewFloorFrame);
         image_floor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +105,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        //nav header status
+        View header = navigationView.getHeaderView(0);
+        statusText = (TextView) header.findViewById(R.id.textViewStatus);
+
+        setConnectionStatus("vuhj");
 
         //od radka
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
@@ -425,7 +432,7 @@ public class MainActivity extends AppCompatActivity
         floortxt.setText(floor.toString());
     }
 
-    void SetConnectionStatus (String status)
+    void setConnectionStatus (String status)
     {
         statusText.setText(status);
 
