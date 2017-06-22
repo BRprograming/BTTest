@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+
+    <TextView
+        android:id="@+id/textViewErrorNumber"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_weight="30"
+        android:gravity="center"
+        android:text="ErrorNumber"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewErrorDate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="30"
+        android:gravity="center"
+        android:text="ErrorDate"
+        android:textAlignment="textEnd"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+    <TextView
+        android:id="@+id/textViewErrorFloor"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_weight="30"
+        android:gravity="center"
+        android:text="ErrorFloor"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="10"
+        android:background="@android:drawable/screen_background_light_transparent"
+        app:srcCompat="@drawable/ic_info_black_24dp" />
+</LinearLayout>

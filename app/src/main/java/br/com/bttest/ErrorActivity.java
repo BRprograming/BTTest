@@ -18,9 +18,6 @@ import java.util.ArrayList;
 public class ErrorActivity extends AppCompatActivity {
 
 
-
-    ArrayList arrayListError;
-    ArrayAdapter arrayAdapterError;
     ListView errorList;
 
 
@@ -31,35 +28,34 @@ public class ErrorActivity extends AppCompatActivity {
 
         errorList = (ListView) findViewById(R.id.errorList);
 
-        arrayListError = new ArrayList();
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 1" + "\n" + "20.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 2" + "\n" + "21.11.2017"); //Get the device's name and the address
-        arrayListError.add("ERROR 3" + "\n" + "22.11.2017"); //Get the device's name and the address
+        Error no1 = new Error("40","22.06.2017 18:22", "5");
+        Error no2 = new Error("12","22.06.2017 18:24", "10");
+        Error no3 = new Error("12","22.06.2017 18:24", "10");
+        Error no4 = new Error("12","22.06.2017 18:24", "10");
+        Error no5 = new Error("12","22.06.2017 18:24", "10");
+        Error no6 = new Error("12","22.06.2017 18:24", "10");
+        Error no7 = new Error("12","22.06.2017 18:24", "10");
+        Error no8 = new Error("12","22.06.2017 18:24", "10");
+        Error no9 = new Error("12","22.06.2017 18:24", "10");
+        Error no10 = new Error("12","22.06.2017 18:24", "10");
 
-        arrayAdapterError = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayListError);
-        errorList.setAdapter(arrayAdapterError);
-        errorList.setOnItemClickListener(myListClickListener2); //Method called when the device from the list is clicked
+        ArrayList<Error> arrayListError = new ArrayList<>();
+        arrayListError.add(no1);
+        arrayListError.add(no2);
+        arrayListError.add(no3);
+        arrayListError.add(no4);
+        arrayListError.add(no5);
+        arrayListError.add(no6);
+        arrayListError.add(no7);
+        arrayListError.add(no8);
+        arrayListError.add(no9);
+        arrayListError.add(no10);
+
+        ErrorListAdapter adapter = new ErrorListAdapter(this, R.layout.error_list_layout, arrayListError);
+        errorList.setAdapter(adapter);
+
+
+
 
 
 
