@@ -24,7 +24,6 @@
         android:layout_weight="30"
         android:gravity="center"
         android:text="ErrorDate"
-        android:textAlignment="textEnd"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
     <TextView
@@ -37,7 +36,7 @@
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonErrorInfo"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_weight="10"
