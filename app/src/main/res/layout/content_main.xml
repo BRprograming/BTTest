@@ -73,7 +73,8 @@
         android:layout_alignBottom="@+id/imageViewWayUpFrame"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/visuImageMargin"
-        app:srcCompat="@drawable/down_arrow_0" />
+        android:rotation="180"
+        app:srcCompat="@drawable/way_down_0" />
 
     <TextView
         android:id="@+id/textViewWay"
@@ -103,12 +104,12 @@
 
         <ImageView
             android:id="@+id/imageViewSpeed"
-            android:layout_width="@dimen/visuImageSize"
-            android:layout_height="@dimen/visuImageSize"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
             android:layout_alignBottom="@+id/imageViewSpeedFrame"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/visuImageMargin"
-            app:srcCompat="@drawable/down_arrow_0" />
+            app:srcCompat="@drawable/speed_slow" />
 
         <TextView
             android:id="@+id/textViewSpeed"
@@ -143,7 +144,7 @@
             android:layout_alignBottom="@+id/imageViewDoorFrame"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/visuImageMargin"
-            app:srcCompat="@drawable/down_arrow_0" />
+            app:srcCompat="@drawable/door_5" />
 
         <TextView
             android:id="@+id/textViewDoor"
@@ -177,7 +178,7 @@
             android:layout_alignBottom="@+id/imageViewWayDownFrame"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/visuImageMargin"
-            app:srcCompat="@drawable/down_arrow_0" />
+            app:srcCompat="@drawable/way_down_0" />
 
         <TextView
             android:id="@+id/textViewWayDown"

@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView floortxt;
+    boolean anim = true;
 
 
     //od radka
@@ -61,9 +64,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//jgjtyj
 
-
+        // vizualization images
 
         floortxt = (TextView) findViewById(R.id.textViewFloor);
         final ImageView image_floor = (ImageView) findViewById(R.id.imageViewFloorFrame);
@@ -87,6 +89,28 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
+        final ImageView imageViewWayDown = (ImageView) findViewById(R.id.imageViewWayDown);
+        imageViewWayDown.setColorFilter(Color.parseColor("#3f51b5"));
+        imageViewWayDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (anim == true) {
+                    imageViewWayDown.setBackgroundResource(R.drawable.way_down_anim);
+                    imageViewWayDown.setImageResource(0);
+                    AnimationDrawable animationDrawableWayDown = (AnimationDrawable) imageViewWayDown.getBackground();
+                    animationDrawableWayDown.start();
+                    anim = false;
+                } else {
+                    imageViewWayDown.setImageResource(R.drawable.way_down_0);
+                    imageViewWayDown.setBackgroundResource(0);
+                    anim = true;
+                }
+            }
+        });
+
+
+
         ImageView errorImage = (ImageView) findViewById(R.id.imageViewErrorFrame);
         errorImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,12 +120,15 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        ImageView imageViewWayUp = (ImageView) findViewById(R.id.imageViewWayUp);
+        imageViewWayUp.setColorFilter(Color.parseColor("#3f51b5"));
 
-        /*AnimationDrawable animacja_kierunek_gora = (AnimationDrawable) image_kierunek_gora.getBackground();
-        AnimationDrawable animacja_pietro = (AnimationDrawable) image_pietro.getBackground();
-        animacja_kierunek_gora.start();
-        animacja_pietro.start();
-        */
+        ImageView imageViewSpeed = (ImageView) findViewById(R.id.imageViewSpeed);
+        imageViewSpeed.setColorFilter(Color.parseColor("#3f51b5"));
+
+        ImageView imageViewDoor = (ImageView) findViewById(R.id.imageViewDoor);
+        imageViewDoor.setColorFilter(Color.parseColor("#3f51b5"));
+
 
 
 
