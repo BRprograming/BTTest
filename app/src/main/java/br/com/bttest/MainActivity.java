@@ -90,8 +90,9 @@ public class MainActivity extends AppCompatActivity
         });
 
 
+
         final ImageView imageViewWayDown = (ImageView) findViewById(R.id.imageViewWayDown);
-        imageViewWayDown.setColorFilter(Color.parseColor("#3f51b5"));
+        changeImageViewColor(imageViewWayDown);
         imageViewWayDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,14 +121,16 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        ImageView imageViewWayUp = (ImageView) findViewById(R.id.imageViewWayUp);
-        imageViewWayUp.setColorFilter(Color.parseColor("#3f51b5"));
+
 
         ImageView imageViewSpeed = (ImageView) findViewById(R.id.imageViewSpeed);
-        imageViewSpeed.setColorFilter(Color.parseColor("#3f51b5"));
+        changeImageViewColor(imageViewSpeed);
 
         ImageView imageViewDoor = (ImageView) findViewById(R.id.imageViewDoor);
-        imageViewDoor.setColorFilter(Color.parseColor("#3f51b5"));
+        changeImageViewColor(imageViewDoor);
+
+        ImageView imageViewWayUp = (ImageView) findViewById(R.id.imageViewWayUp);
+        changeImageViewColor(imageViewWayUp);
 
 
 
@@ -330,6 +333,10 @@ public class MainActivity extends AppCompatActivity
 
         IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED);
         this.registerReceiver(mReceiver, filter);
+    }
+
+    private void changeImageViewColor(ImageView imageView) {
+        imageView.setColorFilter(Color.parseColor(Constants.VISU_COLOR));
     }
 
 

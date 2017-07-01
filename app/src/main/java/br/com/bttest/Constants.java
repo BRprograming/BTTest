@@ -4,6 +4,8 @@ public interface Constants {
 
     public static final String TAG ="TAG";
 
+    public static final String VISU_COLOR = "#3f51b5";
+
     public static final int REQUEST_ENABLE_BT = 10000 ;
     public static final int REQUEST_BT_PAIRING = 10001 ;
 
@@ -61,6 +63,8 @@ public interface Constants {
     // Key names received from the BluetoothChatService Handler
     public static final String DEVICE_NAME = "device_name";
     public static final String TOAST = "toast";
+
+
 
 
 }
