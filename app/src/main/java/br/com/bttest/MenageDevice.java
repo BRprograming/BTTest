@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,8 +42,7 @@ public class MenageDevice extends AppCompatActivity {
     TextView titleParied;
     TextView titleNoParied;
     private Set<BluetoothDevice> pairedDevicesSet;
-
-
+    Button buttonScan;
 
     String chosenDeviceAdress;
     Boolean isPairing=false;
@@ -52,9 +52,6 @@ public class MenageDevice extends AppCompatActivity {
     static Handler handlerD;
     Timer errorConnectTimer;
     Timer errorDisconnectTimer;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,20 +91,15 @@ public class MenageDevice extends AppCompatActivity {
         this.registerReceiver(mReceiver, filter);
 
 
-
-
         prog1 = new ProgressDialog(this);
         prog1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
         Bundle bundle = getIntent().getExtras();
         appStatus = bundle.getInt("appStatus");
 
-        if( (appStatus & Constants.STATE_CONNECT) == Constants.STATE_CONNECT ){
-            titleParied.setText(R.string.already_connected);
-        } else {
-            titleParied.setText(R.string.select_device);
-        }
+        buttonScan = (Button) findViewById(R.id.button_scan);
 
+        refreshTextView();
 
         handlerD = new Handler() {
 
@@ -115,8 +107,9 @@ public class MenageDevice extends AppCompatActivity {
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
 
-                if(msg.what == Constants.SET_DISCONNECT_MSG) {
+                if(msg.what == Constants.DISCONNECT_END_MSG) {
                     if(prog1 != null){
+                        errorConnectTimer.cancel();
                         titleParied.setText(R.string.failed_connect);
                         prog1.hide();
                     }
@@ -124,6 +117,8 @@ public class MenageDevice extends AppCompatActivity {
 
                 if(msg.what == Constants.CONNECT_END_MSG) {
                     if(prog1 != null){
+
+                        errorConnectTimer.cancel();
                         titleParied.setText(R.string.connected);
                         prog1.hide();
                         finish();
@@ -133,7 +128,6 @@ public class MenageDevice extends AppCompatActivity {
                 if(msg.what == Constants.DISCONNECT_TIMEOUT_MSG) {
 
                     errorDisconnectTimer.cancel();
-                    errorDisconnectTimer.purge();
                     if(prog1 != null){
                         titleParied.setText("TIMEOUT DISCONNECT");
                         prog1.hide();
@@ -143,13 +137,11 @@ public class MenageDevice extends AppCompatActivity {
                 if(msg.what == Constants.CONNECT_TIMEOUT_MSG) {
 
                     errorConnectTimer.cancel();
-                    errorConnectTimer.purge();
                     if(prog1 != null){
                         titleParied.setText("TIMEOUT CONNECT");
                         prog1.hide();
                     }
                 }
-
             }
         };
 
@@ -157,14 +149,23 @@ public class MenageDevice extends AppCompatActivity {
 
     public void ScanDevices(View view) {
 
+        if( (appStatus & Constants.STATE_CONNECT) == Constants.STATE_CONNECT ){
+            titleParied.setText(R.string.already_connected);
+            buttonScan.setText(R.string.button_disconnect);
 
-        findViewById(R.id.title_noPaired).setVisibility(View.VISIBLE);
-        findViewById(R.id.noPairedList).setVisibility(View.VISIBLE);
-        noPairedDevicesList();
-        discoverDevices(view);
-        isPairing =false;
-        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, 1.0f);
-        pariedList.setLayoutParams(param);
+            userDisconnectDevice();
+
+        } else {
+            findViewById(R.id.title_noPaired).setVisibility(View.VISIBLE);
+            findViewById(R.id.noPairedList).setVisibility(View.VISIBLE);
+            noPairedDevicesList();
+            discoverDevices(view);
+            isPairing =false;
+            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                    WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, 1.0f);
+            pariedList.setLayoutParams(param);
+        }
+
     }
 
     public void discoverDevices(final View view) {
@@ -201,14 +202,10 @@ public class MenageDevice extends AppCompatActivity {
 
 
     private void noPairedDevicesList() {
-
         arrayListNoPaired = new ArrayList();
-
-
         arrayAdaptertNoPaired = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayListNoPaired);
         noPairedList.setAdapter(arrayAdaptertNoPaired);
         noPairedList.setOnItemClickListener(myListClickListener2); //Method called when the device from the list is clicked
-
     }
 
     // sprawdzanie przycisków na liscie urządzeń
@@ -222,50 +219,23 @@ public class MenageDevice extends AppCompatActivity {
                 myBluetooth.cancelDiscovery();
             }
 
-
-            if ( (appStatus & Constants.STATE_CONNECT) ==Constants.STATE_CONNECT ){
-
-                titleParied.setText(R.string.disconnecting);
-
-                prog1.setMessage(getString(R.string.disconnecting));
-                prog1.show();
-
-            }else {
-
-                titleParied.setText(R.string.connect);
-                prog1.setMessage(getString(R.string.connect));
-                prog1.show();
-            }
-
-
-            //discoveryProgress.setVisibility(View.VISIBLE);
-
-            // Tworzymy nową wiadomość
-             Message wiadomosc = new Message();
-
-             wiadomosc.what = Constants.START_CONNECT_MSG;
-
-            // Dodajemy treść, używamy jednego z dostępnych pól w Message
-            wiadomosc.obj = chosenDeviceAdress;
-
-            // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-            MainActivity.handler.sendMessage(wiadomosc);
-
-            if ( (appStatus & Constants.STATE_CONNECT) ==Constants.STATE_CONNECT ){
-
-                errorDisconnectTimer = new Timer();
-                errorDisconnectTimer.schedule(new disconnectErrorTask(), Constants.TIMEOUT_DISCONNECT, Constants.TIMEOUT_DISCONNECT);
-
+            if ( (appStatus & Constants.STATE_CONNECT) == Constants.STATE_CONNECT ){
+                userDisconnectDevice();
             }else {
 
                 errorConnectTimer = new Timer();
-                errorConnectTimer.schedule(new connectErrorTask(), Constants.TIMEOUT_CONNECT, Constants.TIMEOUT_CONNECT);
+                errorConnectTimer.schedule(new connectErrorTask(),
+                        Constants.TIMEOUT_CONNECT, Constants.TIMEOUT_CONNECT);
+                titleParied.setText(R.string.connect);
+                prog1.setMessage(getString(R.string.connect));
+                prog1.show();
+
+                Message message = new Message();
+                message.what = Constants.START_CONNECT_MSG;
+                message.obj = chosenDeviceAdress;
+                MainActivity.handler.sendMessage(message);
             }
-
-
-
             //finish();
-
         }
     };
 
@@ -280,10 +250,8 @@ public class MenageDevice extends AppCompatActivity {
 
             String info = ((TextView) v).getText().toString();
             if (info.contains(":")){
-
                 chosenDeviceAdress = info.substring(info.length() - 17);
                 pairDevice(myBluetooth.getRemoteDevice(chosenDeviceAdress));
-
             }
         }
     };
@@ -318,10 +286,6 @@ public class MenageDevice extends AppCompatActivity {
                     titleNoParied.setText(R.string.select_pairing_device);
                 }
 
-                //titleParied.setText(R.string.select_device);
-
-                //discoveryProgress.setVisibility(View.INVISIBLE);
-
                 if(arrayAdaptertNoPaired != null){
 
                     if (arrayAdaptertNoPaired.getCount() == 0) {
@@ -329,13 +293,9 @@ public class MenageDevice extends AppCompatActivity {
                         arrayAdaptertNoPaired.add(noDevices);
                     }
                 }
-
             }
 
-
             if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
-
-                //check();
 
                 if( isPairing )
                 {
@@ -346,68 +306,44 @@ public class MenageDevice extends AppCompatActivity {
                     Log.i(Constants.TAG, " ACTION_ACL_CONNECTED isParing=false");
 
                     errorConnectTimer.cancel();
-                    errorConnectTimer.purge();
-
 
                     appStatus |= Constants.STATE_CONNECT;
                     prog1.hide();
                     titleParied.setText(R.string.connected);
-                    finish();
 
-                    Message wiadomosc = new Message();
-
-                    wiadomosc.what = Constants.CONNECT_END_MSG;
-
-                    // Dodajemy treść, używamy jednego z dostępnych pól w Message
-                    wiadomosc.obj = 255;
-
-                    // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-                    MainActivity.handler.sendMessage(wiadomosc);
-
+                    Message message = new Message();
+                    message.what = Constants.CONNECT_END_MSG;
+                    message.obj = 255;
+                    MainActivity.handler.sendMessage(message);
                     isPairing =false;
 
+                    finish();
                 }
             }
 
             if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
-
-                // finish();
-
                 if( isPairing )
                 {
                     Log.i(Constants.TAG, " ACTION_ACL_DISCONNECTED isParing=true");
                     titleParied.setText(R.string.pair_and_connect);
                     prog1.show();
-                    //discoveryProgress.setVisibility(View.VISIBLE);
 
-                    // Tworzymy nową wiadomość
-                    Message wiadomosc = new Message();
+                    Message message = new Message();
+                    message.what = Constants.START_CONNECT_MSG;
+                    message.obj = chosenDeviceAdress;
+                    MainActivity.handler.sendMessage(message);
 
-                    wiadomosc.what = Constants.START_CONNECT_MSG;
-
-                    // Dodajemy treść, używamy jednego z dostępnych pól w Message
-                    wiadomosc.obj = chosenDeviceAdress;
-
-                    // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-                    MainActivity.handler.sendMessage(wiadomosc);
-                    //isPairing = false;
-
-                }else{      // rozłączono
-
+                }else{
+                    errorDisconnectTimer.cancel();
                     Log.i(Constants.TAG, " ACTION_ACL_DISCONNECTED isParing=false");
                     prog1.hide();
                     appStatus &= ~Constants.STATE_CONNECT;
-                    titleParied.setText(R.string.discconnect);
-                    Message wiadomosc = new Message();
+                    refreshTextView();
 
-                    wiadomosc.what = Constants.SET_DISCONNECT_MSG;
-
-                    // Dodajemy treść, używamy jednego z dostępnych pól w Message
-                    wiadomosc.obj = 255;
-
-                    // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-                    MainActivity.handler.sendMessage(wiadomosc);
-
+                    Message message = new Message();
+                    message.what = Constants.DISCONNECT_END_MSG;
+                    message.obj = 255;
+                    MainActivity.handler.sendMessage(message);
 
                 }
             }
@@ -441,11 +377,8 @@ public class MenageDevice extends AppCompatActivity {
             if (BluetoothDevice.ACTION_PAIRING_REQUEST.equals(action)) {
 
                 Log.i(Constants.TAG, " ACTION_PAIRING_REQUEST isParing=true");
-                // finish();
                 isPairing =true;
             }
-
-
         }
 
     };
@@ -455,17 +388,10 @@ public class MenageDevice extends AppCompatActivity {
 
         @Override
         public void run() {
-
-
-            Message wiadomosc = new Message();
-
-            wiadomosc.what = Constants.CONNECT_TIMEOUT_MSG;
-
-            // Dodajemy treść, używamy jednego z dostępnych pól w Message
-            wiadomosc.obj = 255;
-
-            // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-            handlerD.sendMessage(wiadomosc);
+            Message message = new Message();
+            message.what = Constants.CONNECT_TIMEOUT_MSG;
+            message.obj = 255;
+            handlerD.sendMessage(message);
         }
     };
 
@@ -474,17 +400,10 @@ public class MenageDevice extends AppCompatActivity {
 
         @Override
         public void run() {
-
-
-            Message wiadomosc = new Message();
-
-            wiadomosc.what = Constants.DISCONNECT_TIMEOUT_MSG;
-
-            // Dodajemy treść, używamy jednego z dostępnych pól w Message
-            wiadomosc.obj = 255;
-
-            // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-            handlerD.sendMessage(wiadomosc);
+            Message message = new Message();
+            message.what = Constants.DISCONNECT_TIMEOUT_MSG;
+            message.obj = 255;
+            handlerD.sendMessage(message);
         }
     };
 
@@ -495,6 +414,33 @@ public class MenageDevice extends AppCompatActivity {
             method.invoke(device, (Object[]) null);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private void userDisconnectDevice(){
+
+        errorDisconnectTimer = new Timer();
+        errorDisconnectTimer.schedule(new disconnectErrorTask(),
+                Constants.TIMEOUT_DISCONNECT, Constants.TIMEOUT_DISCONNECT);
+
+        titleParied.setText(R.string.disconnecting);
+        prog1.setMessage(getString(R.string.disconnecting));
+        prog1.show();
+
+        Message message = new Message();
+        message.what = Constants.START_USER_DISCONNECT_MSG;
+        message.obj = chosenDeviceAdress;
+        MainActivity.handler.sendMessage(message);
+    }
+
+    private void refreshTextView() {
+
+        if( (appStatus & Constants.STATE_CONNECT) == Constants.STATE_CONNECT ){
+            titleParied.setText(R.string.already_connected);
+            buttonScan.setText(R.string.button_disconnect);
+        } else {
+            titleParied.setText(R.string.select_device);
+            buttonScan.setText(R.string.button_serch);
         }
     }
 

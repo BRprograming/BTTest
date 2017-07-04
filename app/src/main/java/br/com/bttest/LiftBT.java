@@ -7,14 +7,13 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.DialogInterface;
 import android.graphics.Color;
-import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,27 +38,24 @@ public class LiftBT extends AppCompatActivity {
     private boolean btIsConnected=false;
     private static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private OutputStream os = null;
-
-    // private BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
     private BluetoothSocket btSocket;
     private BluetoothAdapter myBluetooth = null;
-    private BluetoothDevice mmDevice = null;
+    private BluetoothDevice myDevice = null;
     private ReceiveBT reciveBT = null;
     private View mianView;
 
-    // zmeinne do logowania
-
+    // login variables
     Dialog loginDialog;
-
-    EditText login_text;
-    EditText password_text;
-    TextView login_title;
-    TextView password_title;
+    EditText editTextLoginName;
+    EditText editTextLoginPassword;
+    TextView textViewLoginTitle;
+    TextView textViewPasswordTitle;
     Boolean loginDataOk =false;
     ProgressDialog progressDialogLogin;
     String tempLogin="";
 
-    Timer errorTimer1;
+    Timer timerErrorLogin;
+    Boolean SaveLoginData = false;
 
 
 
@@ -80,23 +76,21 @@ public class LiftBT extends AppCompatActivity {
 
 
     public void setDisconnect (){
-        Toast.makeText(mianView.getContext(),R.string.discconnect, Toast.LENGTH_LONG).show();
         btIsConnected = false;
-
     }
 
     public void DisconnectDevice (){
 
+        if (myBluetooth.isDiscovering()) {
+            myBluetooth.cancelDiscovery();
+        }
+        
         try {
             btSocket.close();
             btIsConnected = false;
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
-
-        if (myBluetooth.isDiscovering()) {
-            myBluetooth.cancelDiscovery();
         }
     }
 
@@ -106,46 +100,35 @@ public class LiftBT extends AppCompatActivity {
 
     }
 
-    public void btConnect( final String adressSet) {
+    public void btConnect( final String addressSet) {
 
         if (!isEnabled()){
-
-            showBtOn();
+            showDialogBTOn();
         }
 
         if (btIsConnected)
         {
-            // try {
-            //btSocket.close();
-            // btIsConnected = false;
-
-            // } catch (IOException e) {
-            //     e.printStackTrace();
-            //  }
+            DisconnectDevice();
         }
 
-        if( ( adressSet.length() > 0 )  ) //&& (btIsConnected == false)
+        if( addressSet.length() > 0 )
         {
-            ThreadConnect threadConnect = new ThreadConnect(adressSet);
+            ThreadConnect threadConnect = new ThreadConnect(addressSet);
             threadConnect.start();
         }
 
     }
-    Set<BluetoothDevice> getBondedBtDevice(){
 
+    Set<BluetoothDevice> getBondedBtDevice(){
         return myBluetooth.getBondedDevices();
     }
 
-
     void startReceiveBT(){
-
-        reciveBT = new ReceiveBT(btSocket, MainActivity.handler);
+        reciveBT = new ReceiveBT(btSocket);
         reciveBT.start();
-
     }
 
-
-    void showBtOn(){
+    void showDialogBTOn(){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(mianView.getContext(),
                 R.style.Theme_AppCompat_Light_Dialog);
@@ -177,19 +160,17 @@ public class LiftBT extends AppCompatActivity {
         alert.show();
 
         alert.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.BLACK);
-        alert.getButton(AlertDialog.BUTTON_NEGATIVE).setGravity(Gravity.LEFT);
+        //alert.getButton(AlertDialog.BUTTON_NEGATIVE).setGravity(Gravity.LEFT);
         alert.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
-        alert.getButton(AlertDialog.BUTTON_POSITIVE).setGravity(Gravity.RIGHT);
+        //alert.getButton(AlertDialog.BUTTON_POSITIVE).setGravity(Gravity.LEFT);
     }
 
     public BluetoothAdapter getmyBluetooth() {
         return  BluetoothAdapter.getDefaultAdapter();
     }
 
-    // wysyłanie wiadomości
-    void btSend(int func, int parametrCode, int value) {
+    void btSend(int func, int parameterCode, int value) {
 
-        // jeśli jestem połączony
         if(btIsConnected)
         {
             byte[] bytes = new byte[4];
@@ -199,7 +180,7 @@ public class LiftBT extends AppCompatActivity {
                     || (func == Constants.LOGOUT_FUNC) )
             {
                 bytes[Constants.FUNC_POS] = (byte) (func & 0xFF);
-                bytes[Constants.CODE_POS] = (byte) (parametrCode & 0xFF);
+                bytes[Constants.CODE_POS] = (byte) (parameterCode & 0xFF);
                 bytes[Constants.VAL_POS] = (byte) (value & 0xFF);
 
                 crc = calculateLRC(bytes,3);
@@ -228,11 +209,9 @@ public class LiftBT extends AppCompatActivity {
             Toast.makeText(mianView.getContext(), R.string.not_connected_lift,
                     Toast.LENGTH_LONG).show();
         }
-
     }
 
     void btSend(int func, String dataStr) {
-
         // jeśli jestem połączony
         if(btIsConnected)
         {
@@ -241,30 +220,30 @@ public class LiftBT extends AppCompatActivity {
 
             int counterData = dataStr.length();
             // dodaje 5 bity bo 1 funkcja 2 jest pusta daje 255 i 3 ilosć bitów, i 4,5 bo razy 2 lrc
-            byte[] newbytes = new byte[counterData+Constants.CRC_POS+2];
+            byte[] newBytes = new byte[counterData+Constants.CRC_POS+2];
             bytes = dataStr.getBytes();
 
             if (func == Constants.LOGIN_PASSWORD_DATA_FUNC)
             {
-                newbytes[Constants.FUNC_POS] = (byte) (func & 0xFF);
-                newbytes[Constants.CODE_POS] = (byte) (255 & 0xFF);
-                newbytes[Constants.VAL_POS] = (byte) ((counterData+1) & 0xFF);
+                newBytes[Constants.FUNC_POS] = (byte) (func & 0xFF);
+                newBytes[Constants.CODE_POS] = (byte) (255 & 0xFF);
+                newBytes[Constants.VAL_POS] = (byte) ((counterData+1) & 0xFF);
 
-                crc = calculateLRC(newbytes,3);
-                newbytes[Constants.CRC_POS] = (byte) (crc & 0xFF);
+                crc = calculateLRC(newBytes,3);
+                newBytes[Constants.CRC_POS] = (byte) (crc & 0xFF);
 
                 for (int i=0; i<counterData; i++)
                 {
-                    newbytes[Constants.CRC_POS+i+1] = bytes[i];
+                    newBytes[Constants.CRC_POS+i+1] = bytes[i];
                 }
 
                 crc = calculateLRC(bytes,counterData);
                 //bytes[Constants.CRC_POS] = (byte) (crc & 0xFF);
 
-                newbytes[Constants.CRC_POS+counterData+1] = (byte) (crc & 0xFF);
+                newBytes[Constants.CRC_POS+counterData+1] = (byte) (crc & 0xFF);
 
                 try {
-                    os.write(newbytes);
+                    os.write(newBytes);
                     //socket.getOutputStream().write("Test bt11".toString().getBytes());
                 } catch (IOException ignored) {
                 }
@@ -309,165 +288,150 @@ public class LiftBT extends AppCompatActivity {
 
         String addressSet;
 
-
         public ThreadConnect(String deviceAdress){
             addressSet = deviceAdress;
         }
 
         public void run() {
 
-            //text2.setText("Adres:"+adressSet);
-
-            if(btIsConnected == false){
+            if(!btIsConnected){
                 try {
                     Log.i(Constants.TAG, "Start connecting ");
-                    myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
-                    mmDevice = myBluetooth.getRemoteDevice(addressSet);//connects to the device's address and checks if it's available
-                    btSocket = mmDevice.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
+                    myDevice = myBluetooth.getRemoteDevice(addressSet);//connects to the device's address and checks if it's available
+                    btSocket = myDevice.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
                     BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
 
                     try {
                         btSocket.connect();//start connection
                     }
                     catch (Exception e) {
-                        // no op
                         Log.e(Constants.TAG, "btSocket.connect failed: " + e);
                     }
 
-
                     if (btSocket.isConnected()) {
                         btIsConnected = true;
-                        // BLUETOOTH_STATUS = BLUETOOTH_CONNECTED;
-
-                        // Tworzymy nową wiadomość
-                        Message wiadomosc = new Message();
-
-                        wiadomosc.what = Constants.CONNECT_END_MSG;
-
-                        // Dodajemy treść, używamy jednego z dostępnych pól w Message
-                        wiadomosc.obj = 255;
-
-                        // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-                        //MainActivity.handler.sendMessage(wiadomosc);
-                        MenageDevice.handlerD.sendMessage(wiadomosc);
-
+                        Message message = new Message();
+                        message.what = Constants.CONNECT_END_MSG;
+                        message.obj = 255;
+                        MenageDevice.handlerD.sendMessage(message);
                     }
                     else {
-
-                        // Tworzymy nową wiadomość
-                        Message wiadomosc = new Message();
-
-                        wiadomosc.what = Constants.SET_DISCONNECT_MSG;
-
-                        // Dodajemy treść, używamy jednego z dostępnych pól w Message
-                        wiadomosc.obj = 255;
-
-                        // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-                        //MainActivity.handler.sendMessage(wiadomosc);
-                        MenageDevice.handlerD.sendMessage(wiadomosc);
+                        Message message = new Message();
+                        message.what = Constants.DISCONNECT_END_MSG;
+                        message.obj = 255;
+                        MenageDevice.handlerD.sendMessage(message);
                     }
                 } catch (IOException ignored) {}
 
-
                 try {
-                    //is = btSocket.getInputStream();
                     os = btSocket.getOutputStream();
                 } catch (IOException e) {
                     e.printStackTrace();
                     os = null;
-                    // is = null;
                 }
             }
             else{
                 Log.i(Constants.TAG, "isConnected == true so go to else");
-
                 try {
                     btSocket.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                     Log.e(Constants.TAG, "Error btSocket.close ");
                 }
-
             }
         }
     }
 
     public void startProgressDialogLogin(){
-
         progressDialogLogin = new ProgressDialog(mianView.getContext());
         progressDialogLogin.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialogLogin.setSecondaryProgress(ProgressDialog.STYLE_SPINNER);
-        progressDialogLogin.setMessage("Trwa Logowanie...");
-        //progressDialogLogin.show();
+        progressDialogLogin.setMessage( mianView.getContext().getString(R.string.login_in_progress) );
     }
 
 
     void callLoginDialog()
     {
-
-
         final Dialog loginDialog = new Dialog(mianView.getContext());
         loginDialog.setContentView(R.layout.login_dialog);
-        loginDialog.setTitle("Logowanie");
+        loginDialog.setTitle(R.string.log_in);
         loginDialog.setCancelable(true);
         loginDialog.show();
         startProgressDialogLogin();
 
-        Button login = (Button) loginDialog.findViewById(R.id.okBt);
+        Button buttonLogin = (Button) loginDialog.findViewById(R.id.buttonLoginOk);
+        final CheckBox checkBoxSaveLiftData = (CheckBox) loginDialog.findViewById(R.id.checkBoxSaveLiftData);
 
-        login_text = (EditText) loginDialog.findViewById(R.id.loginEdit);
-        password_text = (EditText) loginDialog.findViewById(R.id.passwordEdit);
-        login_title = (TextView) loginDialog.findViewById(R.id.titleLogin);
-        password_title = (TextView) loginDialog.findViewById(R.id.titlePassword);
+        editTextLoginName = (EditText) loginDialog.findViewById(R.id.loginEdit);
+        editTextLoginPassword = (EditText) loginDialog.findViewById(R.id.passwordEdit);
+        textViewLoginTitle = (TextView) loginDialog.findViewById(R.id.titleLogin);
+        textViewPasswordTitle = (TextView) loginDialog.findViewById(R.id.titlePassword);
         loginDialog.show();
 
         // ustaw nazwe jaka była wpisana wcześniej jeśli to kolejna próba logowania
-        login_text.setText(tempLogin);
+        editTextLoginName.setText(tempLogin);
 
-        login.setOnClickListener(new View.OnClickListener()
+        buttonLogin.setOnClickListener(new View.OnClickListener()
         {
 
             public void onClick(View v)
             {
-                String loginStr = login_text.getText().toString();
-                String passwordStr = password_text.getText().toString();
+                String loginStr = editTextLoginName.getText().toString();
+                String passwordStr = editTextLoginPassword.getText().toString();
                 if (loginStr.length() <6 ){
-                    login_title.setText("Nazwa jest za krótka");
-                    login_title.setTextColor(Color.RED);
+                    textViewLoginTitle.setText("Nazwa jest za krótka");
+                    textViewLoginTitle.setTextColor(Color.RED);
                     loginDataOk = false;
                 }
                 else {
                     loginDataOk = true;
-                    login_title.setTextColor(Color.BLACK);
-                    login_title.setText("Nazwa:");
+                    textViewLoginTitle.setTextColor(Color.BLACK);
+                    textViewLoginTitle.setText("Nazwa:");
                 }
 
                 if (passwordStr.length() <4 ){
-                    password_title.setText("Hasło jest za krótkie");
-                    password_title.setTextColor(Color.RED);
+                    textViewPasswordTitle.setText("Hasło jest za krótkie");
+                    textViewPasswordTitle.setTextColor(Color.RED);
                     loginDataOk = false;
                 }else{
-                    password_title.setTextColor(Color.BLACK);
-                    password_title.setText("Hasło:");
+                    textViewPasswordTitle.setTextColor(Color.BLACK);
+                    textViewPasswordTitle.setText("Hasło:");
                 }
 
                 if(loginDataOk)
                 {
                     tempLogin = loginStr;
                     String tempData = loginStr + ":" + passwordStr;
-                    // tu wyslemy dane do mikrokontrolera
+                    // send login data to uc
                     if (tempData.length()<32) {
                         btSend(Constants.LOGIN_PASSWORD_DATA_FUNC, tempData);
                         showProgressDialogLogin();
-
-
-                        errorTimer1 = new Timer();
-                        errorTimer1.schedule(new firstTask1(), Constants.TIMEOUT_RECEIVE_LOGIN,
+                        // Set timer ms error timeout
+                        timerErrorLogin = new Timer();
+                        timerErrorLogin.schedule(new timeOutLoginTask(), Constants.TIMEOUT_RECEIVE_LOGIN,
                                 Constants.TIMEOUT_RECEIVE_LOGIN);
                         loginDialog.cancel();
                     }else{
-                        // zle dane
+                        // bad data
                     }
+                }
+
+            }
+        });
+
+        checkBoxSaveLiftData.setOnClickListener(new View.OnClickListener()
+        {
+
+            public void onClick(View v)
+            {
+                //TODO Save login and password to SQL Lite
+
+                if(checkBoxSaveLiftData.isChecked()){
+                    Toast.makeText(mianView.getContext(), R.string.next_time_login,
+                            Toast.LENGTH_LONG).show();
+                    SaveLoginData = true;
+                } else {
+                    SaveLoginData = false;
                 }
 
             }
@@ -475,62 +439,42 @@ public class LiftBT extends AppCompatActivity {
     }
 
     public void hideProgressDialogLogin(){
-
         progressDialogLogin.dismiss();
     }
 
     public void showProgressDialogLogin(){
-
         progressDialogLogin.show();
-    }
-
-    public void hideLoginDialog()
-    {
-        loginDialog.dismiss();
     }
 
 }
 
-//tells handler to send a message
-class firstTask1 extends TimerTask {
+class timeOutLoginTask extends TimerTask {
 
     @Override
     public void run() {
-
-        Message wiadomosc = new Message();
-
-        wiadomosc.what = Constants.LOGIN_TIMEOUT_MSG;
-
-        // Dodajemy treść, używamy jednego z dostępnych pól w Message
-        wiadomosc.obj = 255;
-
-        // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-        MainActivity.handler.sendMessage(wiadomosc);
+        Message message = new Message();
+        message.what = Constants.LOGIN_TIMEOUT_MSG;
+        message.obj = 255;
+        MainActivity.handler.sendMessage(message);
     }
-};
+}
 
 class ReceiveBT extends Thread{
 
     private InputStream is = null;
     private Boolean dataRdy=false;
-    private Handler h1;
-
     //private static final int START_FRAME = ':', END_FRAME ='\n' , HEAD_POS=1, ADRESS_POS=4, VALUE_POS=6, LRC_POS =8;
 
-    ReceiveBT(BluetoothSocket socket, Handler handler){
+    ReceiveBT(BluetoothSocket socket){
 
         try{
             is = socket.getInputStream();
-            h1 = handler;
         }catch (IOException ignored){
 
         }
-
-        // Log.d(TAG, "Create ConnectThread");
     }
 
     public void run() {
-        // TODO Auto-generated method stub
         byte[] buffer = new byte[128];
         byte[] buff = new byte[128];
         int bytes;
@@ -549,8 +493,6 @@ class ReceiveBT extends Thread{
                     for( int i=0; i<bytes; i++ )
                         buff[i+bytesSum]=buffer[i];
 
-                    //System.arraycopy(buff, 0, buffer, 0, bytes);
-
                     bytesSum += bytes;
 
                     // Kiedy testowałem program to okazało sie, że czasem program zapisywał mi np połowe ramki. Albo tylko 1 znak.
@@ -561,7 +503,6 @@ class ReceiveBT extends Thread{
 
                     // mam całą ramkę
                     if( bytesSum == 4 ) {
-
                         // zerujemy licznik odebranych danych
                         bytesSum = 0;
 
@@ -585,79 +526,43 @@ class ReceiveBT extends Thread{
                     if(dataRdy)
                     {
                         dataRdy =false;
+                        Message message = new Message();
 
-                        if (frameData[Constants.FUNC_POS] == Constants.LOGIN_PASSWORD_DATA_FUNC)
-                        {
-                            // Tworzymy nową wiadomość
-                            Message wiadomosc = new Message();
+                        switch (frameData[Constants.FUNC_POS]){
 
-                            // Dodajemy treść, używamy jednego z dostępnych pól w Message
+                            case Constants.LOGIN_PASSWORD_DATA_FUNC:
+                                message.what = Constants.LOGIN_PASSWORD_DATA_MSG;
+                                message.obj = frameData[Constants.CODE_POS];
+                                MainActivity.handler.sendMessage(message);
+                                break;
 
-                            wiadomosc.what = Constants.LOGIN_PASSWORD_DATA_MSG;
+                            case Constants.WRITE_FUNC:
+                                message.what = Constants.WRITE_FUNC_MSG;
+                                message.obj = frameData;
+                                MainActivity.handler.sendMessage(message);
+                                break;
 
-                            wiadomosc.obj = frameData[Constants.CODE_POS];
+                            case Constants.READ_FUNC:
+                                message.what = Constants.READ_FUNC_MSG;
+                                message.obj = frameData;
+                                ParametersActivity.parametrsHandler.sendMessage(message);
+                                break;
 
-                            h1.sendMessage(wiadomosc);
+                            case Constants.PERMISSIONS_ERROR_FUNC:
+                                message.what = Constants.PERMISSIONS_ERROR_MSG;
+                                message.obj = frameData;
+                                MainActivity.handler.sendMessage(message);
+                                break;
 
+                            case Constants.SET_STATUS:
+                                message.what = Constants.REQUEST_SET_STATUS;
+                                message.obj = frameData;
+                                MainActivity.handler.sendMessage(message);
+                                break;
+                            default:
+
+                                break;
                         }
-
-                        if (frameData[Constants.FUNC_POS] == Constants.WRITE_FUNC)
-                        {
-                            // Tworzymy nową wiadomość
-                            Message wiadomosc = new Message();
-
-                            // Dodajemy treść, używamy jednego z dostępnych pól w Message
-
-                            wiadomosc.what = Constants.WRITE_FUNC_MSG;
-
-                            wiadomosc.obj = frameData;
-
-                            h1.sendMessage(wiadomosc);
-                        }
-
-                        if (frameData[Constants.FUNC_POS] == Constants.READ_FUNC)
-                        {
-                            // Tworzymy nową wiadomość
-                            Message wiadomosc = new Message();
-
-                            // Dodajemy treść, używamy jednego z dostępnych pól w Message
-
-                            wiadomosc.what = Constants.READ_FUNC_MSG;
-
-                            wiadomosc.obj = frameData;
-
-                            ParametersActivity.parametrsHandler.sendMessage(wiadomosc);
-                        }
-
-                        if (frameData[Constants.FUNC_POS] == Constants.PERMISSIONS_ERROR_FUNC)
-                        {
-                            // Tworzymy nową wiadomość
-                            Message wiadomosc = new Message();
-
-                            // Dodajemy treść, używamy jednego z dostępnych pól w Message
-
-                            wiadomosc.what = Constants.PERMISSIONS_ERROR_MSG;
-
-                            wiadomosc.obj = frameData;
-
-                            h1.sendMessage(wiadomosc);
-                        }
-
-                        if (frameData[Constants.FUNC_POS] == Constants.SET_STATUS)
-                        {
-                            // Tworzymy nową wiadomość
-                            Message wiadomosc = new Message();
-
-                            // Dodajemy treść, używamy jednego z dostępnych pól w Message
-
-                            wiadomosc.what = Constants.REQUEST_SET_STATUS;
-
-                            wiadomosc.obj = frameData;
-
-                            h1.sendMessage(wiadomosc);
-                        }
-
-
                     }
 
                     if( bytesSum > 4 )
@@ -714,60 +619,3 @@ enum Parametr {
     }
 
 }
-
-
-
-/*
-
-przetwarzanie na tekst
-while(true){
-            try{
-
-                bytes = is.read(buffer);
-
-                // ramka [:][nagłówek][adres][wartość|[LRC][CR][LF]
-                if(bytes>0){
-                    byte[] newbuffer = new byte[bytes];
-                    for(int i=0;i<bytes;i++)
-                        newbuffer[i]=buffer[i];
-
-                    data = new String(newbuffer, "US-ASCII");
-                    tempData= tempData+data;
-                    if(tempData.contains("\r\n")) {
-
-                        outData = tempData;
-                        tempData ="";
-                        reciveStrCounter=0;
-                        dataRdy=true;
-
-                        // Tworzymy nową wiadomość
-                        Message wiadomosc = new Message();
-
-                        wiadomosc.what =2;
-
-                        // Dodajemy treść, używamy jednego z dostępnych pól w Message
-                        wiadomosc.obj = outData;
-
-
-
-                        // Oczywiście wysyłamy na końcu naszą wiadomość do Handlera
-                        h1.sendMessage(wiadomosc);
-
-                    }
-                    else
-                    {
-                        reciveStrCounter++;
-                        if(reciveStrCounter>32)
-                        {
-                            outData = "Brak zanku CRLF";
-                            tempData ="";
-                            reciveStrCounter=0;
-                        }
-                    }
-                }
-
-            }catch(IOException e){
-                break;
-            }
-        }
- */

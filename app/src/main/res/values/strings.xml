@@ -53,6 +53,8 @@
     <string name="failed_connect">Nie udało się połączyć</string>
     <string name="already_connected">Jesteś połączony</string>
     <string name="disconnecting">Rozłączanie...</string>
+    <string name="button_disconnect">Rozłącz</string>
+    <string name="button_serch">Szukaj urządzenia</string>
 
     <string name="not_connected">Nie jesteś połączony</string>
     <string name="not_connected_lift">Nie jesteś połączony z windą</string>
@@ -79,5 +81,9 @@
     <string name="logged">Zalogowany</string>
     <string name="not_logged">Nie zalogowany</string>
     <string name="not_permissions">Nie masz odpowiednich uprawnień</string>
+    <string name="login_in_progress">Trwa logowanie...</string>
+    <string name="log_in">Logowanie</string>
+    <string name="next_time_login">Przy następnym połączeniu z tą windą podanie nazwy i hasła
+        nie będzie konieczne</string>
 
 </resources>

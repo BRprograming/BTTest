@@ -26,7 +26,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity
     TextView floortxt;
     boolean anim = true;
 
-
     //od radka
     LiftBT liftBT = null;
     public int appStatus=0;
@@ -49,13 +47,8 @@ public class MainActivity extends AppCompatActivity
     static Handler handler;
     static Set<BluetoothDevice> pairedDevices;
     String adress;
-
-    EditText valueSet;
-    EditText adressSet;
-
-
+    Boolean userCallDisconnect = false;
     TextView statusText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +83,6 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-
         final ImageView imageViewWayDown = (ImageView) findViewById(R.id.imageViewWayDown);
         changeImageViewColor(imageViewWayDown);
         imageViewWayDown.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +103,6 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-
         ImageView errorImage = (ImageView) findViewById(R.id.imageViewErrorFrame);
         errorImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,8 +112,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
-
         ImageView imageViewSpeed = (ImageView) findViewById(R.id.imageViewSpeed);
         changeImageViewColor(imageViewSpeed);
 
@@ -131,9 +120,6 @@ public class MainActivity extends AppCompatActivity
 
         ImageView imageViewWayUp = (ImageView) findViewById(R.id.imageViewWayUp);
         changeImageViewColor(imageViewWayUp);
-
-
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -152,160 +138,130 @@ public class MainActivity extends AppCompatActivity
 
         //od radka
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
-        //txt1 = (TextView) findViewById(R.id.bt_message) ;
-
-        //statusText = (TextView) findViewById(R.id.loginStatusText);
         setConnectionStatus(getString(R.string.not_connected));
-        //huj12312313
-
-
-
 
         handler = new Handler() {
 
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
+                int[] adressAndValue = new int[2];
 
-                if(msg.what == Constants.SEND_VAL_MSG) {
+                switch (msg.what){
+                    case Constants.SEND_VAL_MSG:
+                        adressAndValue = (int[]) msg.obj;
+                        liftBT.btSend(Constants.WRITE_FUNC, adressAndValue[0],adressAndValue[1]);
+                        break;
 
-                    int[] adressAndValue = new  int[2];
+                    case Constants.REQUEST_READ_VAL_MSG:
+                        adressAndValue = (int[]) msg.obj;
+                        liftBT.btSend(Constants.READ_FUNC, adressAndValue[0],adressAndValue[1]);
+                        break;
 
-                    adressAndValue = (int[]) msg.obj;
-                    liftBT.btSend(Constants.WRITE_FUNC, adressAndValue[0],adressAndValue[1]);
-                }
+                    case Constants.START_CONNECT_MSG:
+                        appStatus |= Constants.STATE_CONNECTING;
+                        adress = msg.obj.toString();
+                        liftBT.btConnect(adress);
+                        break;
 
-                if(msg.what == Constants.REQUEST_READ_VAL_MSG) {
+                    case Constants.DISCONNECT_END_MSG:
+                        appStatus &= ~(Constants.STATE_CONNECTING | Constants.STATE_CONNECT);
+                        appStatus |= Constants.STATE_DISCONNECT;
+                        Toast.makeText(MainActivity.this, R.string.discconnect, Toast.LENGTH_LONG).show();
+                        liftBT.setDisconnect();
+                        setConnectionStatus(getString(R.string.discconnect));
+                        btIsConnected=false;
+                        break;
 
-                    int[] adressAndValue = new  int[2];
+                    case Constants.START_USER_DISCONNECT_MSG:
+                        userCallDisconnect = true;
+                        liftBT.DisconnectDevice();
+                        break;
 
-                    adressAndValue = (int[]) msg.obj;
-                    liftBT.btSend(Constants.READ_FUNC, adressAndValue[0],adressAndValue[1]);
-                }
+                    case Constants.CONNECT_END_MSG:
+                        appStatus &= ~(Constants.STATE_CONNECTING | Constants.STATE_DISCONNECT);
+                        appStatus |= Constants.STATE_CONNECT;
 
-                if(msg.what == Constants.REQUEST_SET_STATUS) {
+                        Toast.makeText(MainActivity.this, R.string.connected, Toast.LENGTH_LONG).show();
+                        liftBT.startReceiveBT();
+                        liftBT.callLoginDialog();
 
-                    int[] adressAndValue = new  int[2];
+                        setConnectionStatus(getString(R.string.connected));
+                        btIsConnected = true;
+                        break;
 
-                    adressAndValue = (int[]) msg.obj;
-                    switch (adressAndValue[1]) {
+                    case Constants.LOGIN_PASSWORD_DATA_MSG :
 
-                        case 1:
+                        int frameData = (int) msg.obj;
+
+                        liftBT.timerErrorLogin.cancel();
+
+                        switch (frameData){
+                            case 0:
+                                Toast.makeText(MainActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
+                                liftBT.hideProgressDialogLogin();
+                                // liftBT.hideLoginDialog();
+                                setConnectionStatus(getString(R.string.logged));
+                                appStatus &= ~Constants.STATE_LOGIN_ERROR;
+                                appStatus |= Constants.STATE_LOGIN;
+                                break;
+
+                            case 1:
+                                Toast.makeText(MainActivity.this, R.string.login_error_name, Toast.LENGTH_LONG).show();
+                                liftBT.hideProgressDialogLogin();
+                                setConnectionStatus(getString(R.string.not_logged));
+                                appStatus |= Constants.STATE_LOGIN_ERROR;
+                                liftBT.callLoginDialog();
+                                break;
+
+                            case 2:
+                                Toast.makeText(MainActivity.this, R.string.login_error_pass, Toast.LENGTH_LONG).show();
+                                liftBT.hideProgressDialogLogin();
+                                setConnectionStatus(getString(R.string.not_logged));
+                                appStatus |= Constants.STATE_LOGIN_ERROR;
+                                liftBT.callLoginDialog();
+                                break;
+
+                            case 3:
+                                Toast.makeText(MainActivity.this, R.string.login_error, Toast.LENGTH_LONG).show();
+                                liftBT.hideProgressDialogLogin();
+                                setConnectionStatus(getString(R.string.not_logged));
+                                appStatus |= Constants.STATE_LOGIN_ERROR;
+                                liftBT.callLoginDialog();
+                                break;
+
+                            default:
+                                Toast.makeText(MainActivity.this, R.string.login_error, Toast.LENGTH_LONG).show();
+                                liftBT.hideProgressDialogLogin();
+                                appStatus |= Constants.STATE_LOGIN_ERROR;
+                                setConnectionStatus("HUJ WIE CO TO ZA ERROR");
+                                liftBT.callLoginDialog();
+                                break;
+
+                        }
+                        break;
+
+                    case Constants.PERMISSIONS_ERROR_MSG:
+                        Toast.makeText(MainActivity.this, R.string.not_permissions, Toast.LENGTH_LONG).show();
+                        setConnectionStatus(getString(R.string.not_logged));
+                        break;
+
+                    case Constants.LOGIN_TIMEOUT_MSG:
+                        liftBT.hideProgressDialogLogin();
+                        Toast.makeText(MainActivity.this, "LOGIN TIMEOUT", Toast.LENGTH_LONG).show();
+                        liftBT.timerErrorLogin.cancel();
+                        appStatus |= Constants.STATE_LOGIN_ERROR;
+                        break;
+
+                    case Constants.REQUEST_SET_STATUS:
+                        adressAndValue = (int[]) msg.obj;
+                        switch (adressAndValue[1]) {
+                            case 1:
                                 SetFloorVisu(adressAndValue[2]);
-                            break;
-
-                    }
+                                break;
+                        }
+                        break;
                 }
-
-                if(msg.what == Constants.START_CONNECT_MSG) {
-
-                    appStatus |= Constants.STATE_CONNECTING;
-                    adress = msg.obj.toString();
-                    //if (btIsConnected) {
-                    //    liftBT.DisconnectDevice();
-                    //}
-                    liftBT.btConnect(adress);
-                }
-
-
-
-                if(msg.what == Constants.SET_DISCONNECT_MSG) {
-                    appStatus &= ~(Constants.STATE_CONNECTING | Constants.STATE_CONNECT);
-                    appStatus |= Constants.STATE_DISCONNECT;
-
-                    Toast.makeText(MainActivity.this, R.string.discconnect, Toast.LENGTH_LONG).show();
-                    liftBT.setDisconnect();
-                    setConnectionStatus(getString(R.string.discconnect));
-
-                    btIsConnected=false;
-                    appStatus &=  ~Constants.STATE_CONNECT;
-                    appStatus |=  Constants.STATE_DISCONNECT;
-                }
-
-
-
-
-                if(msg.what == Constants.CONNECT_END_MSG) {
-
-                    appStatus &= ~(Constants.STATE_CONNECTING | Constants.STATE_DISCONNECT);
-                    appStatus |= Constants.STATE_CONNECT;
-
-                    Toast.makeText(MainActivity.this, R.string.connected, Toast.LENGTH_LONG).show();
-                    liftBT.startReceiveBT();
-
-                    liftBT.callLoginDialog();
-                    setConnectionStatus(getString(R.string.connected));
-                    btIsConnected = true;
-
-                }
-
-                if(msg.what == Constants.LOGIN_PASSWORD_DATA_MSG) {
-
-                    int frameData = (int) msg.obj;
-
-                    liftBT.errorTimer1.cancel();
-
-
-                    switch (frameData){
-                        case 0:
-                            Toast.makeText(MainActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
-                            liftBT.hideProgressDialogLogin();
-                            // liftBT.hideLoginDialog();
-                            setConnectionStatus(getString(R.string.logged));
-                            appStatus &= ~Constants.STATE_LOGIN_ERROR;
-                            appStatus |= Constants.STATE_LOGIN;
-                            break;
-
-                        case 1:
-                            Toast.makeText(MainActivity.this, R.string.login_error_name, Toast.LENGTH_LONG).show();
-                            liftBT.hideProgressDialogLogin();
-                            setConnectionStatus(getString(R.string.not_logged));
-                            appStatus |= Constants.STATE_LOGIN_ERROR;
-                            liftBT.callLoginDialog();
-                            break;
-
-                        case 2:
-                            Toast.makeText(MainActivity.this, R.string.login_error_pass, Toast.LENGTH_LONG).show();
-                            liftBT.hideProgressDialogLogin();
-                            setConnectionStatus(getString(R.string.not_logged));
-                            appStatus |= Constants.STATE_LOGIN_ERROR;
-                            liftBT.callLoginDialog();
-                            break;
-
-                        case 3:
-                            Toast.makeText(MainActivity.this, R.string.login_error, Toast.LENGTH_LONG).show();
-                            liftBT.hideProgressDialogLogin();
-                            setConnectionStatus(getString(R.string.not_logged));
-                            appStatus |= Constants.STATE_LOGIN_ERROR;
-                            liftBT.callLoginDialog();
-                            break;
-
-                        default:
-                            Toast.makeText(MainActivity.this, R.string.login_error, Toast.LENGTH_LONG).show();
-                            liftBT.hideProgressDialogLogin();
-                            appStatus |= Constants.STATE_LOGIN_ERROR;
-                            setConnectionStatus("HUJ WIE CO TO ZA ERROR");
-                            liftBT.callLoginDialog();
-                            break;
-                    }
-                }
-
-                if(msg.what == Constants.PERMISSIONS_ERROR_MSG) {
-
-                    Toast.makeText(MainActivity.this, R.string.not_permissions, Toast.LENGTH_LONG).show();
-                    setConnectionStatus(getString(R.string.not_logged));
-                }
-
-                if(msg.what == Constants.LOGIN_TIMEOUT_MSG) {
-
-                    liftBT.hideProgressDialogLogin();
-                    Toast.makeText(MainActivity.this, "LOGIN TIMEOUT", Toast.LENGTH_LONG).show();
-                    liftBT.errorTimer1.cancel();
-                    appStatus |= Constants.STATE_LOGIN_ERROR;
-                }
-
-
-
             }
         };
 
@@ -320,7 +276,7 @@ public class MainActivity extends AppCompatActivity
             //     startActivityForResult(enableBtIntent, Constants.REQUEST_ENABLE_BT);
             // }
 
-            liftBT.showBtOn();
+            liftBT.showDialogBTOn();
         }
 
 
@@ -346,17 +302,19 @@ public class MainActivity extends AppCompatActivity
         public void onReceive(Context context, Intent intent) {
 
             String action = intent.getAction();
-
             if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
+                if(userCallDisconnect){
+                    userCallDisconnect = false;
+                }else {
+                    Toast.makeText(MainActivity.this, R.string.discconnect, Toast.LENGTH_LONG).show();
+                    liftBT.setDisconnect();
+                    setConnectionStatus(getString(R.string.discconnect));
+                    appStatus &= ~Constants.STATE_CONNECT;
+                    appStatus |= Constants.STATE_DISCONNECT;
 
-                Toast.makeText(MainActivity.this, R.string.discconnect, Toast.LENGTH_LONG).show();
-                liftBT.setDisconnect();
-                setConnectionStatus(getString(R.string.discconnect));
-                appStatus &= ~Constants.STATE_CONNECT;
-                appStatus |= Constants.STATE_DISCONNECT;
-
-                Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
-                vibrator.vibrate(500);
+                    Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+                    vibrator.vibrate(250);
+                }
             }
         }
     };
@@ -480,7 +438,6 @@ public class MainActivity extends AppCompatActivity
     void setConnectionStatus (String status)
     {
         statusText.setText(status);
-
     }
 
 }

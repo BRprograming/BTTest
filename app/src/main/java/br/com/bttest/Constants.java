@@ -26,7 +26,9 @@ public interface Constants {
     // Message types sent from the BluetoothChatService Handler
     public static final byte START_CONNECT_MSG = 1 ;
     public static final byte CONNECT_END_MSG = 2 ;
-    public static final byte SET_DISCONNECT_MSG = 3 ;
+    public static final byte DISCONNECT_END_MSG = 3 ;
+    public static final byte START_USER_DISCONNECT_MSG =4 ;
+
 
     public static final int LOGIN_PASSWORD_DATA_MSG =10;
     public static final int PERMISSIONS_ERROR_MSG =11;
@@ -55,7 +57,7 @@ public interface Constants {
     public static final int SET_STATUS = 3 ;
     public static final int LOGIN_PASSWORD_DATA_FUNC = 5 ;
     public static final int LOGOUT_FUNC = 6 ;
-    public static final int PERMISSIONS_ERROR_FUNC =10;
+    public static final int PERMISSIONS_ERROR_FUNC =7;
 
 
 
