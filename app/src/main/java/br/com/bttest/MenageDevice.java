@@ -46,12 +46,15 @@ public class MenageDevice extends AppCompatActivity {
 
     String chosenDeviceAdress;
     Boolean isPairing=false;
+    Boolean waitingForBonding = false;
 
     ProgressDialog prog1;
 
     static Handler handlerD;
     Timer errorConnectTimer;
     Timer errorDisconnectTimer;
+
+    IntentFilter filter = new IntentFilter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,28 +71,14 @@ public class MenageDevice extends AppCompatActivity {
 
         noPairedList = (ListView) findViewById(R.id.noPairedList);
 
-
-        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+        filter.addAction(BluetoothDevice.ACTION_FOUND);
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+        filter.addAction(BluetoothDevice.ACTION_ACL_CONNECTED);
+        filter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
+        filter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+        filter.addAction(BluetoothDevice.ACTION_PAIRING_REQUEST);
+        filter.addAction(BluetoothDevice.EXTRA_PAIRING_VARIANT);
         this.registerReceiver(mReceiver, filter);
-
-        filter = new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
-        this.registerReceiver(mReceiver, filter);
-
-        filter = new IntentFilter(BluetoothDevice.ACTION_ACL_CONNECTED);
-        this.registerReceiver(mReceiver, filter);
-
-        filter = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED);
-        this.registerReceiver(mReceiver, filter);
-
-        filter = new IntentFilter(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
-        this.registerReceiver(mReceiver, filter);
-
-        filter = new IntentFilter(BluetoothDevice.ACTION_PAIRING_REQUEST);
-        this.registerReceiver(mReceiver, filter);
-
-        filter = new IntentFilter(BluetoothDevice.EXTRA_PAIRING_VARIANT);
-        this.registerReceiver(mReceiver, filter);
-
 
         prog1 = new ProgressDialog(this);
         prog1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -100,6 +89,8 @@ public class MenageDevice extends AppCompatActivity {
         buttonScan = (Button) findViewById(R.id.button_scan);
 
         refreshTextView();
+        errorDisconnectTimer = new Timer();
+        errorConnectTimer = new Timer();
 
         handlerD = new Handler() {
 
@@ -223,7 +214,6 @@ public class MenageDevice extends AppCompatActivity {
                 userDisconnectDevice();
             }else {
 
-                errorConnectTimer = new Timer();
                 errorConnectTimer.schedule(new connectErrorTask(),
                         Constants.TIMEOUT_CONNECT, Constants.TIMEOUT_CONNECT);
                 titleParied.setText(R.string.connect);
@@ -251,7 +241,11 @@ public class MenageDevice extends AppCompatActivity {
             String info = ((TextView) v).getText().toString();
             if (info.contains(":")){
                 chosenDeviceAdress = info.substring(info.length() - 17);
+
+                isPairing = true;
                 pairDevice(myBluetooth.getRemoteDevice(chosenDeviceAdress));
+
+                //pairDevice2(myBluetooth.getRemoteDevice(chosenDeviceAdress));
             }
         }
     };
@@ -272,9 +266,7 @@ public class MenageDevice extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 if (device.getBondState() != BluetoothDevice.BOND_BONDED) // jesli nie ma na liscie to dodajemy
                 {
-
                     arrayAdaptertNoPaired.add(device.getName() + "\n" + device.getAddress());
-
                 }
 
                 // dla > lolipop
@@ -300,7 +292,6 @@ public class MenageDevice extends AppCompatActivity {
                 if( isPairing )
                 {
                     Log.i(Constants.TAG, " ACTION_ACL_CONNECTED isParing=true");
-
                 }
                 else {
                     Log.i(Constants.TAG, " ACTION_ACL_CONNECTED isParing=false");
@@ -324,15 +315,7 @@ public class MenageDevice extends AppCompatActivity {
             if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
                 if( isPairing )
                 {
-                    Log.i(Constants.TAG, " ACTION_ACL_DISCONNECTED isParing=true");
-                    titleParied.setText(R.string.pair_and_connect);
-                    prog1.show();
-
-                    Message message = new Message();
-                    message.what = Constants.START_CONNECT_MSG;
-                    message.obj = chosenDeviceAdress;
-                    MainActivity.handler.sendMessage(message);
-
+                    isPairing =false;
                 }else{
                     errorDisconnectTimer.cancel();
                     Log.i(Constants.TAG, " ACTION_ACL_DISCONNECTED isParing=false");
@@ -348,29 +331,37 @@ public class MenageDevice extends AppCompatActivity {
                 }
             }
 
-
             if (BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)) {
 
                 // finish();
                 if( isPairing  ){
 
+
                     Log.i(Constants.TAG, " ACTION_BOND_STATE_CHANGED isParing=true");
                     // za pomocą Intecji pobieramy objekt BluetoothDevice
                     BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+
+                    if(device.getBondState() == BluetoothDevice.BOND_BONDING){
+                        waitingForBonding= true;
+
+                    }
+
 
                     if (device.getBondState() == BluetoothDevice.BOND_BONDED) // jesli nie ma na liscie to dodajemy
                     {
 
                         Log.i(Constants.TAG, " ACTION_BOND_STATE_CHANGED BOND_BONDED");
                         arrayAdaptertNoPaired.remove(device.getName() + "\n" + device.getAddress());
+                        arrayAdapterParied.clear();
                         arrayAdapterParied.add(device.getName() + "\n" + device.getAddress());
+                        for (BluetoothDevice bt : pairedDevicesSet) {
+                           arrayAdapterParied.add(bt.getName() + "\n" + bt.getAddress()); //Get the device's name and the address
+                        }
 
                     }else{
 
                         Log.i(Constants.TAG, " ACTION_BOND_STATE_CHANGED BOND_BONDED else isPairing=false");
-                        isPairing = false;
                     }
-
                 }
             }
 
@@ -378,6 +369,7 @@ public class MenageDevice extends AppCompatActivity {
 
                 Log.i(Constants.TAG, " ACTION_PAIRING_REQUEST isParing=true");
                 isPairing =true;
+                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT);
             }
         }
 
@@ -419,7 +411,6 @@ public class MenageDevice extends AppCompatActivity {
 
     private void userDisconnectDevice(){
 
-        errorDisconnectTimer = new Timer();
         errorDisconnectTimer.schedule(new disconnectErrorTask(),
                 Constants.TIMEOUT_DISCONNECT, Constants.TIMEOUT_DISCONNECT);
 
@@ -444,8 +435,8 @@ public class MenageDevice extends AppCompatActivity {
         }
     }
 
-    /*
-    public Boolean pairDevice(BluetoothDevice bdDevice) {
+
+    public Boolean pairDevice2(BluetoothDevice bdDevice) {
         Boolean bool = false;
         try {
             Class cl = Class.forName("android.bluetooth.BluetoothDevice");
@@ -459,7 +450,7 @@ public class MenageDevice extends AppCompatActivity {
             e.printStackTrace();
         }
         return bool.booleanValue();
-    } */
+    }
 
     public void onBackPressed() {
 

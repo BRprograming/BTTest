@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity
     String adress;
     Boolean userCallDisconnect = false;
     TextView statusText;
+    IntentFilter filter = new IntentFilter();
+    Boolean disconnectActionRegistered= false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -188,6 +190,10 @@ public class MainActivity extends AppCompatActivity
 
                         setConnectionStatus(getString(R.string.connected));
                         btIsConnected = true;
+
+                        filter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
+                        registerReceiver(mReceiver, filter);
+                        disconnectActionRegistered = true;
                         break;
 
                     case Constants.LOGIN_PASSWORD_DATA_MSG :
@@ -286,9 +292,9 @@ public class MainActivity extends AppCompatActivity
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
         }
 
+        //filter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
+        //registerReceiver(mReceiver, filter);
 
-        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED);
-        this.registerReceiver(mReceiver, filter);
     }
 
     private void changeImageViewColor(ImageView imageView) {
@@ -353,6 +359,11 @@ public class MainActivity extends AppCompatActivity
            // pairedDevices = liftBT.getBondedBtDevice();
            // Intent intetn = new Intent(getApplicationContext(), DeviceListActivity.class);
            // startActivity(intetn);
+
+            if (disconnectActionRegistered) {
+                this.unregisterReceiver(mReceiver);
+                disconnectActionRegistered = false;
+            }
 
             pairedDevices = liftBT.getBondedBtDevice();
             Intent intent = new Intent(getApplicationContext(), MenageDevice.class);
