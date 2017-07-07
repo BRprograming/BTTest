@@ -20,8 +20,8 @@ public class ErrorActivity extends AppCompatActivity {
 
         errorList = (ListView) findViewById(R.id.errorList);
 
-        Error no1 = new Error("40","22.06.2017 18:22", "5");
-        Error no2 = new Error("12","22.06.2017 18:24", "10");
+        Error no1 = new Error("01","22.06.2017 18:22", "5");
+        Error no2 = new Error("34","22.06.2017 18:24", "10");
         Error no3 = new Error("12","22.06.2017 18:24", "10");
         Error no4 = new Error("12","22.06.2017 18:24", "10");
         Error no5 = new Error("12","22.06.2017 18:24", "10");

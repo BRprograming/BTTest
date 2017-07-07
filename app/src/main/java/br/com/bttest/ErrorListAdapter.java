@@ -2,6 +2,10 @@ package br.com.bttest;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.view.Gravity;
@@ -12,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 
@@ -77,39 +83,62 @@ public class ErrorListAdapter extends ArrayAdapter<Error> implements View.OnClic
         Object object = getItem(position);
         Error error = (Error) object;
 
+
+
         switch (v.getId())
         {
             case R.id.imageButtonErrorInfo:
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext,
                         R.style.Theme_AppCompat_Light_Dialog_Alert);
 
-                builder.setMessage("Zadziałanie termistora silnika napędu dźwigu. Dźwig zostaje odesłany na przystanek parkowania i zatrzymany do czasu opadnięcia temperatury silnika.\n" +
-                        "Awaria układu kontroli temperatury silnika napędu bądź falownika.");
-
-                //TODO dodać funkcję która dobierze opis do błędu
-
-                builder.setCancelable(true);
 
 
+                int errorNo = Integer.parseInt(error.getNumber());
 
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+                try {
+                    SQLiteOpenHelper errorDatabaseHelper = new ErrorDB(mContext);
+                    SQLiteDatabase db = errorDatabaseHelper.getReadableDatabase();
+                    Cursor cursor = db.query("ERRORS",
+                            new String[] {"NUMBER", "NAME", "DESCRIPTION", "TYPE"}, "NUMBER = ?",
+                            new String[] {Integer.toString(errorNo)}, null, null, null);
+
+                    if (cursor.moveToFirst()) {
+                        String nameText = cursor.getString(1);
+                        String descriptionText = cursor.getString(2);
+                        String typeText = cursor.getString(3);
+
+                        builder.setMessage(descriptionText + "\nTyp: " + typeText);
+                        builder.setCancelable(true);
+                        //builder.setIcon(R.drawable.ic_notifications_black_24dp);
+
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
 
 
+                            }
+                        });
+                        AlertDialog alert = builder.create();
+
+                        alert.setTitle("Kod " + error.getNumber() + ": " + nameText);
+
+                        alert.show();
+
+                        alert.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
+                        alert.getButton(AlertDialog.BUTTON_POSITIVE).setGravity(Gravity.RIGHT);
                     }
-                });
+                    cursor.close();
+                    db.close();
+                }
+                catch (SQLiteException e) {
+                    Toast toast = Toast.makeText(mContext, "Baza danych jest niedostępna", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
 
-                AlertDialog alert = builder.create();
-                alert.setTitle("Kod usterki: " + error.getNumber() + "\nPrzegrzanie silnika napędu.");
 
-                alert.show();
-
-                alert.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
-                alert.getButton(AlertDialog.BUTTON_POSITIVE).setGravity(Gravity.RIGHT);
 
                 break;
         }
 
-        }
-
     }
+
+}
