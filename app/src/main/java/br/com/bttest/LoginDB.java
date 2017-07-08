@@ -48,4 +48,16 @@ public class LoginDB extends SQLiteOpenHelper {
         loginValues.put("PASSWORD", password);
         db.insert("LOGIN", null, loginValues);
     }
+
+    //metoda update danych
+    public static void updateLoginData(SQLiteDatabase db, String address, String login, String password) {
+        ContentValues loginValues = new ContentValues();
+        loginValues.put("LOGIN", login);
+        loginValues.put("PASSWORD", password);
+        db.update("LOGIN",
+                    loginValues,
+                    "ADDRESS = ?",
+                    new String[] {address});
+
+    }
 }

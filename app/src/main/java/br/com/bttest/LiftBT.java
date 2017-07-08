@@ -15,7 +15,6 @@ import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -60,14 +59,30 @@ public class LiftBT extends AppCompatActivity {
     String tempLogin="";
 
     Timer timerErrorLogin;
-    Boolean SaveLoginData = false;
+    Boolean loginDataNoExist = false;
 
+    SQLiteDatabase db;
+    SQLiteOpenHelper loginDatabaseHelper;
 
 
     public LiftBT(View view ){
         //get the mobile bluetooth device
         myBluetooth = BluetoothAdapter.getDefaultAdapter();
         mianView = view;
+
+        // przypisuje sobie referencje do tych obiektów na początku po zapisaniu bazy danych na stałe
+        // będzie można to usunąć i odkomentować tak jak napisał Bartek wcześniej w kodzie
+        loginDatabaseHelper = new LoginDB(mianView.getContext());
+        db = loginDatabaseHelper.getReadableDatabase();
+    }
+
+    public void onDestroy() {
+
+        super.onDestroy();
+        // na koniec zamykam baze danych
+        if (db != null & db.isOpen()) {
+            db.close();
+        }
     }
 
     private void enableBt(){
@@ -355,7 +370,7 @@ public class LiftBT extends AppCompatActivity {
     }
 
 
-    void callLoginDialog()
+    void callLoginDialog(final String addressDevice)
     {
         final Dialog loginDialog = new Dialog(mianView.getContext());
         loginDialog.setContentView(R.layout.login_dialog);
@@ -371,25 +386,36 @@ public class LiftBT extends AppCompatActivity {
         textViewLoginTitle = (TextView) loginDialog.findViewById(R.id.titleLogin);
         textViewPasswordTitle = (TextView) loginDialog.findViewById(R.id.titlePassword);
 
-
-        final String addressDevice = "address1"; // dodaje przykladowy adres recznie do testow
+        //final String addressDevice = "address1"; // dodaje przykladowy adres recznie do testow
 
         try {
-            SQLiteOpenHelper loginDatabaseHelper = new LoginDB(mianView.getContext());
-            SQLiteDatabase db = loginDatabaseHelper.getReadableDatabase();
+
+            //SQLiteOpenHelper loginDatabaseHelper = new LoginDB(mianView.getContext());
+            //SQLiteDatabase db = loginDatabaseHelper.getReadableDatabase();
+
             Cursor cursor = db.query("LOGIN",
-                    new String[] {"ADDRESS", "LOGIN", "PASSWORD"}, "ADDRESS = ?",
-                    new String[] {addressDevice}, null, null, null);
+                    new String[] {"ADDRESS", "LOGIN", "PASSWORD"},
+                    "ADDRESS = ?",
+                    new String[] {addressDevice},
+                    null, null, null);
 
             if (cursor.moveToFirst()) {
                 String loginText = cursor.getString(1);
                 String passwordText = cursor.getString(2);
                 editTextLoginName.setText(loginText);
                 editTextLoginPassword.setText(passwordText);
+                loginDataNoExist = false;
+            } else {
+                // nie znaleziono urzadzenia o tym adresie czyli nie łączyliśmy się  z nim wcześniej
+                // lub nie zapisalismy jego danych logowania
+                loginDataNoExist = true;
             }
+
             cursor.close();
-            db.close();
-        }
+            // nie zamykam bo jak baza nie ma nazwy (nie jest zapisana) to zamkniecie powoduje jej zniszczenie
+            // tak mi się wydaje przynjmniej. jak bedziemy ja zapisaywać w pliku to mozna zamykac po odczycie
+            //db.close();
+    }
         catch (SQLiteException e) {
             Toast toast = Toast.makeText(mianView.getContext(), "Baza danych jest niedostępna", Toast.LENGTH_SHORT);
             toast.show();
@@ -443,10 +469,20 @@ public class LiftBT extends AppCompatActivity {
                     }else{
                         // bad data
                     }
-                    if (SaveLoginData) {
-                        SQLiteOpenHelper loginDatabaseHelper = new LoginDB(mianView.getContext());
-                        SQLiteDatabase db = loginDatabaseHelper.getWritableDatabase();
+
+                    // jesli chcemy zaspisac i nie ma rekordu to poprostu dodajemy
+                    if (checkBoxSaveLiftData.isChecked() & loginDataNoExist) {
+                        //SQLiteOpenHelper loginDatabaseHelper = new LoginDB(mianView.getContext());
+                        //SQLiteDatabase db = loginDatabaseHelper.getReadableDatabase();
                         LoginDB.insertLoginData(db, addressDevice, loginStr, passwordStr);
+                       // db.close();
+                    }
+
+                    //jesli chcemy zapisac(zmodyfikowac) bo np ktos sie pomylil i wpisał zle hasło
+                    //czyli rekord juz istnieje to update
+                    if(checkBoxSaveLiftData.isChecked() & !loginDataNoExist) {
+                        LoginDB.updateLoginData(db, addressDevice, loginStr, passwordStr);
+                        // db.close();
                     }
                 }
 
@@ -463,9 +499,6 @@ public class LiftBT extends AppCompatActivity {
                 if(checkBoxSaveLiftData.isChecked()){
                     Toast.makeText(mianView.getContext(), R.string.next_time_login,
                             Toast.LENGTH_LONG).show();
-                    SaveLoginData = true;
-                } else {
-                    SaveLoginData = false;
                 }
 
             }
@@ -628,6 +661,7 @@ class ReceiveBT extends Thread{
 
         return LRC;
     }
+
 
 
 }

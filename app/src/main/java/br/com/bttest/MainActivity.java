@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
     boolean btIsConnected=false;
     static Handler handler;
     static Set<BluetoothDevice> pairedDevices;
-    String adress;
+    String address;
     Boolean userCallDisconnect = false;
     TextView statusText;
     IntentFilter filter = new IntentFilter();
@@ -147,23 +147,23 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                int[] adressAndValue = new int[2];
+                int[] addressAndValue = new int[2];
 
                 switch (msg.what){
                     case Constants.SEND_VAL_MSG:
-                        adressAndValue = (int[]) msg.obj;
-                        liftBT.btSend(Constants.WRITE_FUNC, adressAndValue[0],adressAndValue[1]);
+                        addressAndValue = (int[]) msg.obj;
+                        liftBT.btSend(Constants.WRITE_FUNC, addressAndValue[0],addressAndValue[1]);
                         break;
 
                     case Constants.REQUEST_READ_VAL_MSG:
-                        adressAndValue = (int[]) msg.obj;
-                        liftBT.btSend(Constants.READ_FUNC, adressAndValue[0],adressAndValue[1]);
+                        addressAndValue = (int[]) msg.obj;
+                        liftBT.btSend(Constants.READ_FUNC, addressAndValue[0],addressAndValue[1]);
                         break;
 
                     case Constants.START_CONNECT_MSG:
                         appStatus |= Constants.STATE_CONNECTING;
-                        adress = msg.obj.toString();
-                        liftBT.btConnect(adress);
+                        address = msg.obj.toString();
+                        liftBT.btConnect(address);
                         break;
 
                     case Constants.DISCONNECT_END_MSG:
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity
 
                         Toast.makeText(MainActivity.this, R.string.connected, Toast.LENGTH_LONG).show();
                         liftBT.startReceiveBT();
-                        liftBT.callLoginDialog();
+                        liftBT.callLoginDialog(address);
 
                         setConnectionStatus(getString(R.string.connected));
                         btIsConnected = true;
@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity
                                 liftBT.hideProgressDialogLogin();
                                 setConnectionStatus(getString(R.string.not_logged));
                                 appStatus |= Constants.STATE_LOGIN_ERROR;
-                                liftBT.callLoginDialog();
+                                liftBT.callLoginDialog(address);
                                 break;
 
                             case 2:
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity
                                 liftBT.hideProgressDialogLogin();
                                 setConnectionStatus(getString(R.string.not_logged));
                                 appStatus |= Constants.STATE_LOGIN_ERROR;
-                                liftBT.callLoginDialog();
+                                liftBT.callLoginDialog(address);
                                 break;
 
                             case 3:
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity
                                 liftBT.hideProgressDialogLogin();
                                 setConnectionStatus(getString(R.string.not_logged));
                                 appStatus |= Constants.STATE_LOGIN_ERROR;
-                                liftBT.callLoginDialog();
+                                liftBT.callLoginDialog(address);
                                 break;
 
                             default:
@@ -241,7 +241,7 @@ public class MainActivity extends AppCompatActivity
                                 liftBT.hideProgressDialogLogin();
                                 appStatus |= Constants.STATE_LOGIN_ERROR;
                                 setConnectionStatus("HUJ WIE CO TO ZA ERROR");
-                                liftBT.callLoginDialog();
+                                liftBT.callLoginDialog(address);
                                 break;
 
                         }
@@ -260,10 +260,10 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case Constants.REQUEST_SET_STATUS:
-                        adressAndValue = (int[]) msg.obj;
-                        switch (adressAndValue[1]) {
+                        addressAndValue = (int[]) msg.obj;
+                        switch (addressAndValue[1]) {
                             case 1:
-                                SetFloorVisu(adressAndValue[2]);
+                                SetFloorVisu(addressAndValue[2]);
                                 break;
                         }
                         break;
@@ -410,21 +410,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-
-    }
-
-    //od radka
-    public void Connect (View view){
-
-        pairedDevices = liftBT.getBondedBtDevice();
-        Intent intetn = new Intent(getApplicationContext(), DeviceListActivity.class);
-        startActivity(intetn);
-    }
-
-
-    public void Check (View view){
-
 
 
     }
