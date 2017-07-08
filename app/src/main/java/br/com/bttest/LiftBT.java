@@ -6,11 +6,16 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.DialogInterface;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -356,7 +361,6 @@ public class LiftBT extends AppCompatActivity {
         loginDialog.setContentView(R.layout.login_dialog);
         loginDialog.setTitle(R.string.log_in);
         loginDialog.setCancelable(true);
-        loginDialog.show();
         startProgressDialogLogin();
 
         Button buttonLogin = (Button) loginDialog.findViewById(R.id.buttonLoginOk);
@@ -366,10 +370,35 @@ public class LiftBT extends AppCompatActivity {
         editTextLoginPassword = (EditText) loginDialog.findViewById(R.id.passwordEdit);
         textViewLoginTitle = (TextView) loginDialog.findViewById(R.id.titleLogin);
         textViewPasswordTitle = (TextView) loginDialog.findViewById(R.id.titlePassword);
-        loginDialog.show();
+
+
+        final String addressDevice = "address1"; // dodaje przykladowy adres recznie do testow
+
+        try {
+            SQLiteOpenHelper loginDatabaseHelper = new LoginDB(mianView.getContext());
+            SQLiteDatabase db = loginDatabaseHelper.getReadableDatabase();
+            Cursor cursor = db.query("LOGIN",
+                    new String[] {"ADDRESS", "LOGIN", "PASSWORD"}, "ADDRESS = ?",
+                    new String[] {addressDevice}, null, null, null);
+
+            if (cursor.moveToFirst()) {
+                String loginText = cursor.getString(1);
+                String passwordText = cursor.getString(2);
+                editTextLoginName.setText(loginText);
+                editTextLoginPassword.setText(passwordText);
+            }
+            cursor.close();
+            db.close();
+        }
+        catch (SQLiteException e) {
+            Toast toast = Toast.makeText(mianView.getContext(), "Baza danych jest niedostępna", Toast.LENGTH_SHORT);
+            toast.show();
+        }
 
         // ustaw nazwe jaka była wpisana wcześniej jeśli to kolejna próba logowania
-        editTextLoginName.setText(tempLogin);
+        //editTextLoginName.setText(tempLogin);
+
+        loginDialog.show();
 
         buttonLogin.setOnClickListener(new View.OnClickListener()
         {
@@ -413,6 +442,11 @@ public class LiftBT extends AppCompatActivity {
                         loginDialog.cancel();
                     }else{
                         // bad data
+                    }
+                    if (SaveLoginData) {
+                        SQLiteOpenHelper loginDatabaseHelper = new LoginDB(mianView.getContext());
+                        SQLiteDatabase db = loginDatabaseHelper.getWritableDatabase();
+                        LoginDB.insertLoginData(db, addressDevice, loginStr, passwordStr);
                     }
                 }
 
