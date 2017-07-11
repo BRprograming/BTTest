@@ -8,7 +8,7 @@
                 android:title="Dane sterowania" />
             <item
                 android:id="@+id/Licznik_czasu"
-                android:icon="@android:drawable/ic_lock_idle_alarm"
+                android:icon="@drawable/ic_action_time"
                 android:title="Licznik czasu" />
         </menu>
     </item>
@@ -17,21 +17,21 @@
         <menu>
             <item
                 android:id="@+id/Ustawienia"
-                android:icon="@android:drawable/ic_menu_preferences"
+                android:icon="@drawable/ic_action_settings"
                 android:title="Ustawienia" />
             <item
                 android:id="@+id/Rejestr_usterek"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_action_error"
                 android:title="Rejestr Usterek" />
         </menu>
     </item>
 
     <item android:title="Diagnostyka">
         <menu>
-        <item
-            android:id="@+id/cos"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Coś tam coś tam" />
+            <item
+                android:id="@+id/module_status_menu"
+                android:icon="@drawable/ic_action_about"
+                android:title="Stan modułów" />
         </menu>
     </item>
 

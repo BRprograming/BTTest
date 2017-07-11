@@ -398,6 +398,10 @@ public class MainActivity extends AppCompatActivity
                 intent_error.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);//wraca do aktywnosci a nie uruchamia jej na nowo
                 startActivity(intent_error);
 
+            } else if (id == R.id.module_status_menu){
+                Intent intent_module = new Intent(this, ModuleListActivity.class);
+                //intent_module.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);//wraca do aktywnosci a nie uruchamia jej na nowo
+                startActivity(intent_module);
             }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
