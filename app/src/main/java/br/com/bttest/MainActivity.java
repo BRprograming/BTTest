@@ -78,7 +78,10 @@ public class MainActivity extends AppCompatActivity
                                 // of the selected item
                                 String floor = getResources().getStringArray(R.array.Ilość_przystanków_01)[which];
                                 Toast.makeText(MainActivity.this, "Wybrano piętro " + floor, Toast.LENGTH_SHORT).show();
-                                floortxt.setText(floor);
+                                //to ustawi teraz aplikacja po odebraniu na jakim piętrze sie znajduje od sterownika
+                                //floortxt.setText(floor);
+                                // wysyłam na jakie piętro chce jechać
+                                liftBT.btSend(Constants.SET_STATUS, Constants.FLOOR_STATUS, Integer.parseInt(floor));
                             }
                         });
                 AlertDialog mDialog = builder.create();
@@ -250,8 +253,11 @@ public class MainActivity extends AppCompatActivity
                     case Constants.REQUEST_SET_STATUS:
                         addressAndValue = (int[]) msg.obj;
                         switch (addressAndValue[1]) {
-                            case 1:
+                            case Constants.FLOOR_STATUS:
                                 SetFloorVisu(addressAndValue[2]);
+                                break;
+                            case Constants.DIRECTION_STATUS:
+                                changeDirection(addressAndValue[2]);
                                 break;
                         }
                         break;

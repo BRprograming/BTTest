@@ -59,6 +59,9 @@ public interface Constants {
     public static final int LOGOUT_FUNC = 6 ;
     public static final int PERMISSIONS_ERROR_FUNC =7;
 
+    public static final int FLOOR_STATUS = 1;
+    public static final int DIRECTION_STATUS = 2;
+
 
 
 

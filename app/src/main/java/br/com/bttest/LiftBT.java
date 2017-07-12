@@ -197,7 +197,7 @@ public class LiftBT extends AppCompatActivity {
             int crc=0;
 
             if ( (func == Constants.WRITE_FUNC) || (func == Constants.READ_FUNC)
-                    || (func == Constants.LOGOUT_FUNC) )
+                    || (func == Constants.LOGOUT_FUNC) || (func == Constants.SET_STATUS) )
             {
                 bytes[Constants.FUNC_POS] = (byte) (func & 0xFF);
                 bytes[Constants.CODE_POS] = (byte) (parameterCode & 0xFF);
