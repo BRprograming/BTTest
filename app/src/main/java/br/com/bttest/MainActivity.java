@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity
     IntentFilter filter = new IntentFilter();
     Boolean disconnectActionRegistered= false;
 
+    public ImageView imageViewWayDown;
+    public ImageView imageViewWayUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,24 +88,13 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-        final ImageView imageViewWayDown = (ImageView) findViewById(R.id.imageViewWayDown);
+        imageViewWayDown = (ImageView) findViewById(R.id.imageViewWayDown);
         changeImageViewColor(imageViewWayDown);
-        imageViewWayDown.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (anim == true) {
-                    imageViewWayDown.setBackgroundResource(R.drawable.way_down_anim);
-                    imageViewWayDown.setImageResource(0);
-                    AnimationDrawable animationDrawableWayDown = (AnimationDrawable) imageViewWayDown.getBackground();
-                    animationDrawableWayDown.start();
-                    anim = false;
-                } else {
-                    imageViewWayDown.setImageResource(R.drawable.way_down_0);
-                    imageViewWayDown.setBackgroundResource(0);
-                    anim = true;
-                }
-            }
-        });
+
+
+        imageViewWayUp = (ImageView) findViewById(R.id.imageViewWayUp);
+        changeImageViewColor(imageViewWayUp);
+
 
 
         ImageView errorImage = (ImageView) findViewById(R.id.imageViewErrorFrame);
@@ -119,10 +111,6 @@ public class MainActivity extends AppCompatActivity
 
         ImageView imageViewDoor = (ImageView) findViewById(R.id.imageViewDoor);
         changeImageViewColor(imageViewDoor);
-
-        ImageView imageViewWayUp = (ImageView) findViewById(R.id.imageViewWayUp);
-        changeImageViewColor(imageViewWayUp);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -297,8 +285,35 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
+
     private void changeImageViewColor(ImageView imageView) {
         imageView.setColorFilter(Color.parseColor(Constants.VISU_COLOR));
+    }
+
+    //zmiana wyświetlania kierunku jazdy
+    private void changeDirection(int direction) {
+        switch (direction) {
+            case 1:
+                imageViewWayUp.setBackgroundResource(R.drawable.way_down_anim);
+                imageViewWayUp.setImageResource(0);
+                AnimationDrawable animationDrawableWayUp = (AnimationDrawable) imageViewWayUp.getBackground();
+                animationDrawableWayUp.start();
+                break;
+            case 2:
+                imageViewWayDown.setBackgroundResource(R.drawable.way_down_anim);
+                imageViewWayDown.setImageResource(0);
+                AnimationDrawable animationDrawableWayDown = (AnimationDrawable) imageViewWayDown.getBackground();
+                animationDrawableWayDown.start();
+                break;
+            case 0:
+                imageViewWayDown.setImageResource(R.drawable.way_down_0);
+                imageViewWayDown.setBackgroundResource(0);
+                imageViewWayUp.setImageResource(R.drawable.way_down_0);
+                imageViewWayUp.setBackgroundResource(0);
+        }
+
+
     }
 
 
